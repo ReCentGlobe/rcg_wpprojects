@@ -7,11 +7,11 @@
     <?php wp_head(); ?>
   </head>
 
-  <body <?php body_class(); ?> data-barba="wrapper">
+  <body <?php body_class('min-h-screen bg-gray-100'); ?> data-barba="wrapper">
     <?php wp_body_open(); ?>
     <?php do_action('get_header'); ?>
 
-    <div id="app">
+    <div id="app" class="w-full mx-auto flex flex-col">
       <?php echo \Roots\view(\Roots\app('sage.view'), \Roots\app('sage.data'))->render(); ?>
     </div>
 

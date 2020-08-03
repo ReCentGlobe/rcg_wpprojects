@@ -2,7 +2,7 @@
 <project version="4">
   <component name="PhpCodeSniffer">
     <phpcs_settings>
-      <PhpCSConfiguration beautifier_path="$PROJECT_DIR$/vendor/bin/phpcbf" standards="MySource;PEAR;PSR1;PSR12;PSR2;Squiz;Zend" tool_path="$PROJECT_DIR$/vendor/bin/phpcs" />
+      <PhpCSConfiguration beautifier_path="$PROJECT_DIR$/vendor/bin/phpcbf" standards="MySource;PEAR;PSR1;PSR12;PSR2;Squiz;Zend" tool_path="$PROJECT_DIR$/vendor/bin/phpcs" timeout="10000" />
     </phpcs_settings>
   </component>
   <component name="PhpIncludePathManager">
@@ -72,6 +72,7 @@
       <path value="$PROJECT_DIR$/vendor/mustache/mustache" />
       <path value="$PROJECT_DIR$/vendor/ivome/graphql-relay-php" />
       <path value="$PROJECT_DIR$/vendor/webonyx/graphql-php" />
+      <path value="$PROJECT_DIR$/../sfb1199_phase2/web/wp" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

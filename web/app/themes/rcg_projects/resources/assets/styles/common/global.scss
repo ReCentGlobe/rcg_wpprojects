@@ -1,3 +1,10 @@
 /**
  * Global
  */
+@font-face {
+  font-family: "RMNeue-Regular";
+  src: url("../fonts/RMNeue-Regular.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/RMNeue-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}

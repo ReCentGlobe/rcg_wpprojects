@@ -1,6 +1,10 @@
 module.exports = {
   purge: [],
+  important: true,
   theme: {
+    fontFamily: {
+      sans: ["RMNeue-Regular", "sans-serif"],
+    },
     extend: {
       colors: {
         project: {

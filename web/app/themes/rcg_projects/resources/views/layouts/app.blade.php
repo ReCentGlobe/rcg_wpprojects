@@ -1,15 +1,12 @@
 @include('partials.header')
 
-<main class="container" data-barba="container" data-barba-namespace="home">
-  <div class="main">
-    @yield('content')
-  </div>
-
-  @hasSection('sidebar')
+<main class="flex-grow" data-barba="container" data-barba-namespace="home">
+  @yield('content')
+{{--  @hasSection('sidebar')
     <aside class="sidebar">
       @yield('sidebar')
     </aside>
-  @endif
+  @endif--}}
 </main>
 
 @include('partials.footer')

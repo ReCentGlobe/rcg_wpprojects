@@ -4762,7 +4762,7 @@
         },
         {
             "name": "wpackagist-plugin/disable-comments",
-            "version": "1.10.2",
+            "version": "1.10.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/disable-comments/",
@@ -4770,7 +4770,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/disable-comments.zip?timestamp=1588316559"
+                "url": "https://downloads.wordpress.org/plugin/disable-comments.zip?timestamp=1596006377"
             },
             "require": {
                 "composer/installers": "~1.0"
