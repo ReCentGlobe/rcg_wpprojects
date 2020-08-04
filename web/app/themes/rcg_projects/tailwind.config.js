@@ -1,12 +1,12 @@
 module.exports = {
   purge: [],
-  important: true,
   theme: {
     fontFamily: {
-      sans: ["RMNeue-Regular", "sans-serif"],
+      sans: ["Shape", "sans-serif"],
     },
     extend: {
       colors: {
+        primary: "var(--primary-color)",
         project: {
           lighter: "#b3bcf5",
           default: "#5c6ac4",

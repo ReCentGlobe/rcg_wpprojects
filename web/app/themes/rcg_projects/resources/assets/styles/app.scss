@@ -6,12 +6,16 @@
 @import "config/postflight";
 @import "~tailwindcss/components.css";
 @import "~tailwindcss/utilities.css";
+@import "config/headings";
 
 /** Common */
 @import "common/global";
 
 /** Components */
 @import "components";
+
+/** Objects */
+@import "objects";
 
 /** Partials */
 @import "partials/header";

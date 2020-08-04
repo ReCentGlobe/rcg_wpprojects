@@ -5,3 +5,11 @@
 $theme-colors: (
   primary: #525ddc,
 );
+
+:root {
+  --white: #ffffff;
+  --primary-color: hsl(350, 50%, 50%);
+  --secondary-color: hsl(120, 20%, 50%);
+  --dark-color: #000;
+  --light-color: #fff;
+}

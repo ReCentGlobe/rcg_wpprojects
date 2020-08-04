@@ -1,5 +1,5 @@
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> style="--primary-color: <?= get_field('theme_primary_color','option') ?>; --secondary-color: <?= get_field('theme_secondary_color','option') ?>; --dark-color: <?= get_field('theme_dark_color','option') ?>; --light-color: <?= get_field('theme_light_color','option') ?>">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
   </head>
 
-  <body <?php body_class('min-h-screen bg-gray-100'); ?> data-barba="wrapper">
+  <body <?php body_class('min-h-screen'); ?> data-barba="wrapper">
     <?php wp_body_open(); ?>
     <?php do_action('get_header'); ?>
 

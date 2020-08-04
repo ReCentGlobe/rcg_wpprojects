@@ -1,0 +1,34 @@
+.o-gutenberg-content {
+  padding: calc(8rem - 0px) 0 calc(16rem - 0px);
+
+  & p a {
+    color: var(--primary-color);
+  }
+
+  & p {
+    font-size: 27px;
+    margin-bottom: 1rem;
+  }
+
+  & h2 {
+    font-size: 64.8px;
+    font-weight: 700;
+    &:after {
+      content: "—";
+      display: block;
+      color: var(--primary-color);
+      font-weight: 400;
+      padding-top: 1rem;
+    }
+  }
+
+  & h6 {
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    line-height: 1.4;
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}

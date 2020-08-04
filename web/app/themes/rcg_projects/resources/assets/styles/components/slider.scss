@@ -1,0 +1,18 @@
+.c-slider {
+  & h2 {
+    background-size: 100% 40%;
+    display: inline;
+    z-index: -1;
+    background-image: linear-gradient(
+      var(--primary-color),
+      var(--primary-color)
+    );
+    background-position: 0 80%;
+    background-repeat: no-repeat;
+    /* background-size: 0 40%; */
+    margin-left: -0.55rem;
+    margin-right: -0.55rem;
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+  }
+}
