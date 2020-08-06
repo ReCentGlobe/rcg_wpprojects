@@ -6,11 +6,53 @@ import barba from "@barba/core";
 import barbaPrefetch from "@barba/prefetch";
 import anime from "animejs";
 import gsap from "gsap";
+import modular from "modujs";
+import * as modules from "./modules";
+//import globals from './globals';
+import { html } from "./utils/env";
 
 barba.use(barbaPrefetch);
 
 const loadingScreen = document.querySelector(".c-loadingscreen__layer");
 const mainNavigation = document.querySelector(".c-header-navigation");
+const app = new modular({
+  modules: modules,
+});
+
+window.onload = (event) => {
+  barba.init({
+    // We don't want "synced transition"
+    // because both content are not visible at the same time
+    // and we don't need next content is available to start the page transition
+    sync: false,
+    debug: true,
+    transitions: [
+      {
+        name: "basic",
+        leave(data) {
+          pageTransitionIn();
+          // Loading screen is hiding everything, time to remove old content!
+          data.current.container.remove();
+        },
+        enter(data) {
+          pageTransitionOut(data.next.container);
+        },
+        once(data) {
+          contentAnimation(data.next.container);
+        },
+      },
+    ],
+  });
+  init();
+};
+
+function init() {
+  app.init(app);
+  //globals();
+
+  html.classList.add("is-loaded", "is-ready");
+  html.classList.remove("is-loading");
+}
 
 // Function to add and remove the page transition screen
 function pageTransitionIn() {
@@ -64,33 +106,3 @@ function contentAnimation(container) {
     })
     .from(mainNavigation, { duration: 0.5, translateY: -10, opacity: 0 });
 }
-
-window.requestAnimationFrame(() => {
-  barba.init({
-    // We don't want "synced transition"
-    // because both content are not visible at the same time
-    // and we don't need next content is available to start the page transition
-    sync: true,
-    debug: true,
-    transitions: [
-      {
-        name: "basic",
-        leave(data) {
-          pageTransitionIn();
-          // Loading screen is hiding everything, time to remove old content!
-          data.current.container.remove();
-        },
-        enter(data) {
-          pageTransitionOut(data.next.container);
-        },
-        once(data) {
-          contentAnimation(data.next.container);
-        },
-      },
-    ],
-  });
-});
-
-$(document).ready(() => {
-  // console.log('Hello world');
-});

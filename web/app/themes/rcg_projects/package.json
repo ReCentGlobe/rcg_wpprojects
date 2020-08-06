@@ -79,7 +79,9 @@
     "intersection-observer": "^0.10.0",
     "jquery": "^3.5.0",
     "lazysizes": "^5.2.0",
+    "locomotive-scroll": "^3.5.4",
     "lozad": "^1.14.0",
+    "modujs": "^1.4.2",
     "popper.js": "^1.16.1",
     "swiper": "^5.3.6",
     "webfontloader": "^1.6.28"
