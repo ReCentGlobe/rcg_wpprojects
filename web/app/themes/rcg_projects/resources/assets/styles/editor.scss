@@ -1,15 +1,27 @@
 /**
  * Editor
  */
+// Settings
+// ==========================================================================
+@import "settings/colors";
+@import "settings/config";
+@import "settings/variables";
 
-@import 'config/variables';
+// ==========================================================================
+// Tools
+// ==========================================================================
+@import "tools/functions";
+@import "tools/mixins";
+@import "tools/fonts";
+@import "tools/layout";
+
+@import 'settings/variables';
 
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
 
 .editor-styles-wrapper > * {
-  @import 'common/global';
   @import 'components';
 
   font-family: $font-family-base;

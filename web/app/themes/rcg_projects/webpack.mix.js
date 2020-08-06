@@ -36,6 +36,7 @@ mix
     "animejs",
     "headroom.js",
     "@tinypixelco/hoverfx",
+    "gsap",
   ]);
 
 mix

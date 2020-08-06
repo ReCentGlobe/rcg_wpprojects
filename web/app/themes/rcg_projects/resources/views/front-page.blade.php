@@ -4,7 +4,7 @@
   <div class="flex bg-white" style="height:600px;">
     <div class="flex items-center text-center lg:text-left px-8 md:px-16 lg:px-24 lg:w-1/2">
       <div class="c-slider ">
-        <h2 class="">Project Title</h2>
+        <h2 class="c-slider__title"><span class="js-slider__title">Project Title</span></h2>
         <p class="mt-2 text-sm text-gray-500 md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi cum cupiditate ducimus, fugit harum id necessitatibus odio quam quasi, quibusdam rem tempora voluptates. Cumque debitis dignissimos id quam vel!</p>
         <div class="c-partners flex justify-center lg:justify-start mt-6">
             <div class="c-partners__logo">

@@ -1,0 +1,45 @@
+// ==========================================================================
+// Base / Page
+// ==========================================================================
+
+html {
+  min-height: 100%; /* [2] */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-top: 0;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background: inherit;
+    left: 0;
+    height: 5px;
+  }
+  &:before,
+  &:after {
+    height: 20px;
+  }
+  &:after {
+    bottom: 0;
+  }
+}
+
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  text-shadow: none;
+}
+
+a {
+  color: var(--secondary-color);
+}

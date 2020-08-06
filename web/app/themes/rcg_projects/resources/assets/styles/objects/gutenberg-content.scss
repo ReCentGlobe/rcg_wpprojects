@@ -2,7 +2,16 @@
   padding: calc(8rem - 0px) 0 calc(16rem - 0px);
 
   & p a {
-    color: var(--primary-color);
+    background-size: 100% 25%;
+    display: inline;
+    z-index: -1;
+    background-image: linear-gradient(
+      var(--secondary-color),
+      var(--secondary-color)
+    );
+    background-position: 0 85%;
+    background-repeat: no-repeat;
+    color: var(--dark-color);
   }
 
   & p {

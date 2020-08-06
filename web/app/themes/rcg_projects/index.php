@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
   </head>
 
-  <body <?php body_class('min-h-screen'); ?> data-barba="wrapper">
+  <body <?php body_class('min-h-screen'); ?>>
     <?php wp_body_open(); ?>
     <?php do_action('get_header'); ?>
 
