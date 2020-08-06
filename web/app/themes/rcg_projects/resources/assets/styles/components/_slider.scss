@@ -1,7 +1,7 @@
 .c-slider {
   &__title {
-    //padding: 50px;
-    //top: 50px;
+    @include font-size(64.8px);
+    font-weight: 700;
     margin-top: 20px;
     transform: translateY(0);
     opacity: 1;
@@ -27,5 +27,11 @@
     & span.is-animating {
       background-size: 100% 40%;
     }
+  }
+  &__description {
+    @include font-size(27px, 1.5);
+    //font-size: 27px;
+    margin-top: 1rem;
+    //line-height: 1.5;
   }
 }

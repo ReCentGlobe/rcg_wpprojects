@@ -4,7 +4,7 @@
   </div>
 </div>
 <div data-barba="wrapper">
-  <main class="flex-grow" data-barba="container" data-barba-namespace="{{$post->post_name}}">
+  <main class="flex-grow" data-scroll-section data-barba="container" data-barba-namespace="{{$post->post_name}}">
     @yield('content')
   {{--  @hasSection('sidebar')
       <aside class="sidebar">

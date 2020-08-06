@@ -1,6 +1,6 @@
 
 
-<header class="o-header">
+<header class="o-header" data-scroll-section>
   <nav class="bg-white shadow-lg">
     <div class="md:flex items-center justify-between py-2 px-8 md:px-16 lg:px-24">
       <div class="flex justify-between items-center">

@@ -12,14 +12,14 @@ $assets-path: "../" !default;
 
 // Typefaces
 // =============================================================================
-$font-sans-serif: sans-serif;
+$font-sans-serif: Shape, sans-serif;
 
 // Typography
 // =============================================================================
 // Base
-$font-size: 16px;
-$line-height: 24px / $font-size;
-$font-family: $font-sans-serif;
+$global-font-size: 16px;
+$global-line-height: 24px / $global-font-size;
+$global-font-family: $font-sans-serif;
 $color: #222222;
 // Headings
 $font-size-h1: 36px !default;
@@ -28,7 +28,7 @@ $font-size-h3: 24px !default;
 $font-size-h4: 20px !default;
 $font-size-h5: 18px !default;
 $font-size-h6: 16px !default;
-$line-height-h: $line-height;
+$line-height-h: $global-line-height;
 // Weights
 $light: 300;
 $normal: 400;

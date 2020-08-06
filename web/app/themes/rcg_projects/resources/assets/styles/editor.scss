@@ -22,7 +22,5 @@
 @import '~bootstrap/scss/mixins';
 
 .editor-styles-wrapper > * {
-  @import 'components';
-
   font-family: $font-family-base;
 }

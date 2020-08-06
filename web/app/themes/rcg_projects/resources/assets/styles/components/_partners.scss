@@ -1,0 +1,30 @@
+.c-partners {
+  //display: grid;
+  //grid-template-columns: repeat(2, 1fr);
+  //grid-column-gap: 16px;
+  color: var(--black);
+  padding: 1em 0 0.8em;
+  //grid-template-columns: repeat(3, 1fr);
+  //grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+  //grid-column-gap: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 15%;
+  height: 20vh;
+
+  & > .u-grid {
+    justify-content: center;
+  }
+
+  &__logo {
+    position: relative;
+    margin: 15px;
+
+    & * {
+      //max-width: em(200px);
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}

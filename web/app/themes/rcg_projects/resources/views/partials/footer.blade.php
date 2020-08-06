@@ -1,4 +1,4 @@
-<section class="text-gray-700 body-font flex md:flex-row flex-col items-center bg-primary">
+<section data-scroll-section class="text-gray-700 body-font flex md:flex-row flex-col items-center bg-primary">
   <div
     class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 px-8 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
     <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">ReCentGlobe Newsletter</h1>
@@ -18,7 +18,7 @@
 
 </section>
 
-<footer class="border-t mt-12 pt-12 pb-32 px-8 md:px-16 lg:px-24">
+<footer data-scroll-section class="border-t mt-12 pt-12 pb-32 px-8 md:px-16 lg:px-24">
   <div class="flex flex-wrap">
     <div class="w-full lg:w-2/5">
       <p class="text-gray-600 hidden lg:block p-0 lg:pr-12">

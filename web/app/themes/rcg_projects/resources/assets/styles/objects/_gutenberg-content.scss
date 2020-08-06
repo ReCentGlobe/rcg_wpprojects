@@ -12,6 +12,12 @@
     background-position: 0 85%;
     background-repeat: no-repeat;
     color: var(--dark-color);
+    transition: background 0.2s linear, color 0.2s linear, border 0.2s linear,
+      opacity 0.2s linear, fill 0.2s linear, stroke 0.2s linear;
+
+    @include u-hocus {
+      color: #929ca6;
+    }
   }
 
   & p {
