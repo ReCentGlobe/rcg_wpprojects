@@ -1,10 +1,14 @@
 .c-header-navigation {
-  display: block;
-  flex-flow: row;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
-
-  &__link {
+  &.-desktop {
+    display: block;
+    flex-flow: row;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    @media (max-width: $to-small) {
+      display: none;
+    }
+  }
+  &.-desktop &__link {
     position: relative;
     line-height: 120px;
     font-weight: 500;
@@ -15,8 +19,7 @@
     text-decoration: none;
     font-size: 15px;
   }
-
-  &__item {
+  &.-desktop &__item {
     position: relative;
     display: inline-block;
     text-align: center;
@@ -35,7 +38,10 @@
       background: var(--dark-color);
     }
     &:hover > .c-header-navigation__link {
-      color: var(--light-color);
+      color: var(--secondary-color);
     }
+  }
+
+  &.-mobile {
   }
 }

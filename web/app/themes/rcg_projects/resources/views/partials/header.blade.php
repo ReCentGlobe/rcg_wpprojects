@@ -1,11 +1,33 @@
 
-
-<header class="o-header" data-scroll-section>
-  <nav class="bg-white shadow-lg">
+<header data-scroll-section class="o-header" data-scroll data-scroll-speed=".2" data-scroll-delay="1">
+  <div class="c-languageswitcher js-languageswitcher">
+    <ul class="c-languageswitcher_list">
+    @php
+      $languages = apply_filters( 'wpml_active_languages', NULL, 'skip_missing=0&orderby=code' );
+      if(!empty($languages)){
+          foreach($languages as $l){
+          	if($l['active']) {
+              echo '<li style="text-transform:uppercase;">';
+          	  echo apply_filters( 'wpml_current_language', NULL );
+          	  echo '</li>';
+          	}
+            if(!$l['active'])  {
+                echo '<li>';
+                echo '<a href="'.$l['url'].'"  alt="'.$l['language_code'].'" style="text-transform:uppercase;">';
+                echo apply_filters( 'wpml_display_language_names', NULL, $l['code'], false );
+                echo '</a>';
+                echo '</li>';
+            }
+          }
+      }
+    @endphp
+    </ul>
+  </div>
+  <nav class="bg-white">
     <div class="md:flex items-center justify-between py-2 px-8 md:px-16 lg:px-24">
       <div class="flex justify-between items-center">
-        <div class="text-2xl font-bold text-gray-800 md:text-3xl">
-          <a href="{{ home_url('/') }}">{{ $siteName }}</a>
+        <div class="c-header-logo js-header-logo text-2xl font-bold text-gray-800 md:text-3xl">
+          <a href="{{ home_url('/') }}" class="text-gray-800">{{ $siteName }}</a>
         </div>
         <div class="md:hidden">
           <button type="button" class="block text-gray-800 hover:text-gray-700 focus:text-gray-700 focus:outline-none">
@@ -18,7 +40,7 @@
       </div>
 
         @if ($navigation)
-        <div class="c-header-navigation">
+        <div class="c-header-navigation -desktop js-header-navigation">
               @foreach ($navigation as $item)
                 <div class="c-header-navigation__item">
                   <a href="{{ $item->url }}" class="c-header-navigation__link @if ($item->children) has-children @endif {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }}">

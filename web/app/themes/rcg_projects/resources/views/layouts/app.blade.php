@@ -1,17 +1,15 @@
-@include('partials.header')
-<div class="c-loadingscreen">
-  <div class="c-loadingscreen__layer">
+<div data-barba="container" data-barba-namespace="{{ (is_archive()) ? post_type_archive_title() : get_the_title() }}">
+  <div data-scroll-container>
+  @include('partials.header')
+  <main class="flex-grow js-main-content" data-scroll-section>
+    @yield('content')
+  </main>
+  @include('partials.footer')
   </div>
 </div>
-<div data-barba="wrapper">
-  <main class="flex-grow" data-scroll-section data-barba="container" data-barba-namespace="{{$post->post_name}}">
-    @yield('content')
-  {{--  @hasSection('sidebar')
-      <aside class="sidebar">
-        @yield('sidebar')
-      </aside>
-    @endif--}}
-  </main>
+<div class="c-loadingscreen js-loadingscreen">
+  <div class="c-loadingscreen__layer">
+  </div>
+  <div class="c-loadingscreen__title">
+  </div>
 </div>
-
-@include('partials.footer')

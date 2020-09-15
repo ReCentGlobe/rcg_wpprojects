@@ -56,3 +56,40 @@ img {
 svg {
   fill: currentColor; /* [5] */
 }
+
+// Transitions for Lazyload
+.js-lazyload {
+  opacity: 0;
+}
+
+.is-loaded {
+  -webkit-animation: focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  opacity: 1;
+}
+
+@keyframes scaleout {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+

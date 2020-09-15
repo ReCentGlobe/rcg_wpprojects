@@ -4,7 +4,9 @@
 
 <p class="byline author vcard">
   <span>{{ __('By', 'sage') }}</span>
-  <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" rel="author" class="fn">
-    {{ get_the_author() }}
+  <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a href="@authorurl" itemprop="url">
+    <span class="fn" itemprop="name" rel="author">@author</span>
   </a>
+</span>
 </p>

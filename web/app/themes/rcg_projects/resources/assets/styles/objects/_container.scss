@@ -18,4 +18,14 @@
   padding-right: rem($padding);
   padding-left: rem($padding);
   max-width: rem($container-width + ($padding * 2));
+
+  &.-wide {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  @media (max-width: $to-small) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }

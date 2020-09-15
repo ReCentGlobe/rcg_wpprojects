@@ -1,0 +1,33 @@
+.c-blog {
+  &_media {
+  }
+  &_content {
+    color: var(--dark-color);
+    text-align: center;
+    padding-top: 1.1rem;
+  }
+  &_title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inherit;
+    max-width: 100%;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.25rem;
+  }
+  &_subtitle {
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    overflow-x: hidden;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inherit;
+    max-width: 100%;
+  }
+}

@@ -1,32 +1,33 @@
 .o-gutenberg-content {
+  width: 100%;
   padding: calc(8rem - 0px) 0 calc(16rem - 0px);
 
-  & p a {
-    background-size: 100% 25%;
-    display: inline;
-    z-index: -1;
-    background-image: linear-gradient(
-      var(--secondary-color),
-      var(--secondary-color)
-    );
-    background-position: 0 85%;
-    background-repeat: no-repeat;
-    color: var(--dark-color);
-    transition: background 0.2s linear, color 0.2s linear, border 0.2s linear,
-      opacity 0.2s linear, fill 0.2s linear, stroke 0.2s linear;
+  @media (max-width: $to-small) {
+    padding: calc(4rem - 0px) 0 calc(8rem - 0px);
+  }
 
+  & p a {
+    color: var(--primary-color);
     @include u-hocus {
       color: #929ca6;
     }
   }
-
   & p {
-    font-size: 27px;
+    font-size: rem(27px);
     margin-bottom: 1rem;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: $line-height-h;
+    margin-bottom: rem(30px);
+  }
   & h2 {
-    font-size: 64.8px;
+    font-size: rem($font-size-h2);
     font-weight: 700;
     &:after {
       content: "—";
@@ -35,14 +36,27 @@
       font-weight: 400;
       padding-top: 1rem;
     }
+    margin-bottom: rem(20px);
   }
-
+  & h3 {
+    font-size: rem($font-size-h3);
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-weight: 800;
+    margin-bottom: rem(2.5px);
+  }
+  & h4 {
+    font-size: rem($font-size-h4);
+  }
+  & h5 {
+    font-size: rem($font-size-h5);
+  }
   & h6 {
     color: var(--primary-color);
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
     line-height: 1.4;
     font-weight: 800;
-    font-size: 15px;
+    font-size: rem($font-size-h6);
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }

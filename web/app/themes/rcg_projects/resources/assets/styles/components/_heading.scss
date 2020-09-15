@@ -8,10 +8,22 @@
 
   &.-h2 {
     font-size: rem($font-size-h2);
+    font-weight: 700;
+    &:after {
+      content: "—";
+      display: block;
+      color: var(--primary-color);
+      font-weight: 400;
+      padding-top: 1rem;
+    }
   }
 
   &.-h3 {
     font-size: rem($font-size-h3);
+    padding-bottom: 0.5em;
+    font-weight: 800;
+    padding-top: 0.5em;
+    color: var(--dark-color);
   }
 
   &.-h4 {
@@ -24,5 +36,12 @@
 
   &.-h6 {
     font-size: rem($font-size-h6);
+    color: var(--primary-color);
+    line-height: 1.4;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 3rem;
+    margin-bottom: 0;
   }
 }

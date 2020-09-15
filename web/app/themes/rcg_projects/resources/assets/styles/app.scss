@@ -56,6 +56,12 @@
 @import "components/header-navigation";
 @import "components/loading";
 @import "components/partners";
+@import "components/languageswitcher";
+@import "components/page-header";
+@import "components/eventarchive";
+@import "components/blogarchive";
+@import "components/blog";
+@import "components/peoplearchive";
 
 /** Partials */
 @import "partials/header";
@@ -65,7 +71,8 @@
 @import "utilities/ratio";
 @import "utilities/grid";
 //@import "utilities/widths";
-// @import "utilities/align";
+@import "utilities/align";
+@import "utilities/backgrounds";
 // @import "utilities/helpers";
 // @import "utilities/states";
 // @import "utilities/spacing";
