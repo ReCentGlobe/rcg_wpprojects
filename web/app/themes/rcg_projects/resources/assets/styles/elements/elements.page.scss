@@ -1,0 +1,42 @@
+// ==========================================================================
+// Base / Page
+// ==========================================================================
+
+html {
+  font-family: $global-font-family;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.is-loading {
+    cursor: wait;
+  }
+
+  &.has-scroll-smooth {
+    overflow: hidden;
+  }
+
+  &.has-scroll-dragging {
+    user-select: none;
+  }
+}
+
+body {
+  &.has-scroll-smooth & {
+    overflow: hidden;
+  }
+}
+
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  text-shadow: none;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  @include u-hocus {
+    color: #929ca6;
+  }
+}

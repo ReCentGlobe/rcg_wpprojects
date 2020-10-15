@@ -57,6 +57,7 @@ class ThemeOptions extends Field
              * Newsletter Tab
              */
             ->addGroup('newsletter')
+                ->addTrueFalse('enabled')
                 ->addText('headline')
                 ->addTextarea('content')
                 ->addLink('link')

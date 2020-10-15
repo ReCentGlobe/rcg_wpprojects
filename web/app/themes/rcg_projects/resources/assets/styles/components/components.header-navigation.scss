@@ -1,0 +1,47 @@
+.c-header-navigation {
+  margin-top: $inuit-global-spacing-unit-small;
+  margin-bottom: $inuit-global-spacing-unit-small;
+  justify-content: flex-end;
+
+  &.-desktop {
+    display: block;
+    flex-flow: row;
+    @include mq($until: mobile) {
+      display: none;
+    }
+  }
+  &.-desktop &__link {
+    position: relative;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    color: var(--dark-color);
+    @include font-size(16px, 1.25);
+    letter-spacing: 1.14px;
+    white-space: nowrap;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: $inuit-global-spacing-unit-tiny;
+
+    @include u-hocus {
+      color: inherit;
+      text-decoration: none;
+      border-bottom-color: var(--primary-color);
+    }
+  }
+  &.-desktop &__item {
+    display: inline-block;
+    color: inherit;
+    letter-spacing: 0;
+    &:first-of-type > .c-header-navigation__link{
+      padding-left: 0;
+    }
+  }
+  &.-desktop &__link.is-active {
+    border-bottom-color: var(--primary-color);
+  }
+
+  &.-mobile {
+  }
+}

@@ -3,24 +3,59 @@
  */
 // Settings
 // ==========================================================================
-@import "settings/colors";
-@import "settings/config";
-@import "settings/variables";
+//@import "settings/colors";
+//@import "settings/config";
+//@import "settings/variables";
+@import "settings/settings.config";
+@import "settings/settings.global";
+@import "~inuitcss/settings/settings.core";
 
 // ==========================================================================
 // Tools
 // ==========================================================================
-@import "tools/functions";
-@import "tools/mixins";
-@import "tools/fonts";
-@import "tools/layout";
+//@import "tools/functions";
+//@import "tools/mixins";
+//@import "tools/fonts";
+//@import "tools/layout";
+//@import 'settings/variables';
+@import "~inuitcss/tools/tools.font-size";
+@import "~inuitcss/tools/tools.clearfix";
+@import "~inuitcss/tools/tools.hidden";
+@import "~sass-mq/mq";
+@import "tools/tools.aliases";
+@import "tools/tools.mixins";
+@import "tools/tools.functions";
 
-@import 'settings/variables';
-
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins';
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 
 .editor-styles-wrapper > * {
-  font-family: $font-family-base;
+  font-family: $global-font-family;
+}
+
+.is-style-rcg-people {
+  & tr {
+    border-top: 2px solid var(--dark-color);
+
+    & td {
+      @include font-size(16px);
+      padding-top: $inuit-global-spacing-unit-small;
+      padding-bottom: calc(#{$inuit-global-spacing-unit-small} * 2);
+    }
+    & td:first-of-type {
+      margin-bottom: $inuit-global-spacing-unit-tiny;
+    }
+    & td:first-of-type strong {
+      margin: $inuit-global-spacing-unit-tiny 0 $inuit-global-spacing-unit-tiny;
+      font-weight: 700;
+      @include font-size(22px);
+    }
+    & td:nth-of-type(2),
+    & td:nth-of-type(3) {
+      color: var(--primary-color);
+      margin-bottom: $inuit-global-spacing-unit-tiny;
+      font-weight: 700;
+    }
+  }
 }

@@ -1,59 +1,39 @@
-<section data-scroll-section class="text-gray-700 body-font flex md:flex-row flex-col items-center bg-primary">
-  <div
-    class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 px-8 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">ReCentGlobe Newsletter</h1>
-    <p class="text-white mb-8 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <div class="flex flex-row justify-start w-full max-w-md shadow-xl border-t border-b border-gray-200">
-      <input class="border-l-4 border-red-700 bg-white focus:outline-none px-4 w-full m-0" placeholder="Email"
-             type="text">
-      <button
-        class="inline-flex text-black py-2 px-6 focus:outline-none text-lg m-0 h-12 bg-gray-100">Subscribe</button>
+<footer data-scroll-section class="c-footer">
+  <div class="o-section">
+    <div class="o-section__content o-container">
+      <div class="c-footer__content o-layout">
+        <div class="o-layout__item u-1/2">
+          <div class="c-footer__logo">
+            <a href="{{ home_url('/') }}" class="">{{ $siteName }}</a>
+          </div>
+          <div class="c-footer__box c-footer__box--left">
+            <div class="c-footer__newsletter">
+              <p>
+                @option('newsletter_headline')
+              </p>
+              <a
+                href="@option('newsletter_link', 'url')"
+                target="@option('newsletter_link', 'target')"
+                class="o-btn">@option('newsletter_link', 'title')</a>
+            </div>
+          </div>
+        </div>
+        <div class="o-layout__item u-1/2">
+          <div class="c-footer__box c-footer__box--right">
+            <p class="text-gray-600 hidden lg:block p-0 lg:pr-12">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="c-footer__footer">
+        <ul class="c-footer__footernav">
+          <li>Contact</li>
+          <li>Imprint</li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="md:w-1/2 w-5/6">
-    <img class="object-cover object-center" alt="hero" style="width: 100%;"
-         src="https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=60">
-  </div>
-
-</section>
-
-<footer data-scroll-section class=" pt-12 pb-32 px-8 md:px-16 lg:px-24">
-  <div class="flex flex-wrap">
-    <div class="w-full lg:w-2/5">
-      <p class="text-gray-600 hidden lg:block p-0 lg:pr-12">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-    </div>
-
-    <div class="w-full mt-6 lg:mt-0 md:w-1/2 lg:w-1/5">
-      <h6 class="font-semibold text-gray-700 mb-4">Project</h6>
-      <ul>
-        <li> <a href="" class="block text-gray-600 py-2">Team</a> </li>
-        <li> <a href="" class="block text-gray-600 py-2">About</a> </li>
-        <li> <a href="" class="block text-gray-600 py-2">Contact</a> </li>
-      </ul>
-    </div>
-
-    <div class="w-full mt-6 lg:mt-0 md:w-1/2 lg:w-1/5">
-      <h6 class="font-semibold text-gray-700 mb-4">Project</h6>
-      <ul>
-        <li> <a href="" class="block text-gray-600 py-2">Team</a> </li>
-        <li> <a href="" class="block text-gray-600 py-2">Privacy Policy</a> </li>
-        <li> <a href="" class="block text-gray-600 py-2">Imprint</a> </li>
-        <li> <a href="" class="block text-gray-600 py-2">Contact</a> </li>
-      </ul>
-    </div>
-
-    <div class="w-full mt-6 lg:mt-0 md:w-1/2 lg:w-1/5">
-      <h6 class="font-semibold text-gray-700 mb-4">Project</h6>
-      <ul>
-        <li> <a href="" class="block text-gray-600 py-2">Team</a> </li>
-        <li> <a href="" class="block text-gray-600 py-2">About</a> </li>
-        <li> <a href="" class="block text-gray-600 py-2">Contact</a> </li>
-      </ul>
-    </div>
-
   </div>
 </footer>

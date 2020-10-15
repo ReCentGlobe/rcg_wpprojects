@@ -19,6 +19,17 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_add_inline_script('sage/vendor.js', asset('scripts/manifest.js')->contents(), 'before');
 
+    /* Poor man's inertia.js 😂 */
+    wp_localize_script('sage/app.js', 'rcgproject', [
+        'isPage' => is_page(),
+        'isHome' => is_home(),
+        'isFrontPage' => is_front_page(),
+        'ajax_base' => get_site_url(),
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'ajax_nonce' => wp_create_nonce('rcgproject_nonce'),
+        'currentPage' => get_the_ID(),
+    ]);
+
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }

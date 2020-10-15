@@ -1,0 +1,34 @@
+.c-fixed_wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
+@media (min-width: 1000px) {
+  .c-fixed_wrapper {
+    height: 60vh;
+  }
+}
+@media (max-width: 999px) {
+  .c-fixed_wrapper {
+    height: 50vh;
+  }
+}
+.c-fixed_target {
+  bottom: -100vh;
+}
+.c-fixed,
+.c-fixed_target {
+  position: absolute;
+  top: -100vh;
+  right: 0;
+  left: 0;
+}
+.c-fixed {
+  height: 100vh;
+  background-size: cover;
+  background-position: 50%;
+  opacity: 1;
+}
+html:not(.has-scroll-smooth) .c-fixed {
+  top: 0;
+}

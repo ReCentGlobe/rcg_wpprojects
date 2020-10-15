@@ -13,19 +13,15 @@
 //
 
 .o-container {
+  @include inuit-clearfix();
+  position: relative;
+  padding-right: $inuit-global-spacing-unit;
+  padding-left: $inuit-global-spacing-unit;
   margin-right: auto;
   margin-left: auto;
-  padding-right: rem($padding);
-  padding-left: rem($padding);
-  max-width: rem($container-width + ($padding * 2));
+  max-width: $inuit-wrapper-width;
 
-  &.-wide {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-
-  @media (max-width: $to-small) {
-    padding-right: 0;
-    padding-left: 0;
+  &.-canvas {
+    position: initial;
   }
 }

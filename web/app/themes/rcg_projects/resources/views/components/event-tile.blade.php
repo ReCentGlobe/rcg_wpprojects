@@ -1,38 +1,60 @@
-<div class="c-event -single">
-  <div class="u-grid">
-    @if($invert)
-    <div class="u-grid_col-8">
-      <a class="news-post-slideshow" href="@permalink">
-        <div class="o-media">
-          <picture class="o-ratio u-16:9">
-            <source data-srcset="https://picsum.photos/1500/1500" media="(min-width: 768px)">
-            <img class="js-lazyload" data-src="https://picsum.photos/1500/1500">
-          </picture>
+<a
+  @hasfield('event_external') href="@field('event_externallink','url')" @endfield
+@null('event_external') href="@permalink" @endnull
+class="c-event-tile">
+@php
+  $startdate = get_field('event_startdate');
+  $enddate = get_field('event_enddate');
+  $wholedate = get_field('event_wholeday');
+@endphp
+
+  <div class="c-event-tile__content">
+    <div class="o-layout">
+      <div class="c-event-tile__block o-layout__item u-padding-bottom-tiny">
+        <div class="c-event-tile__date">
+          {{ DateTime::createFromFormat('Y-m-d H:i:s', $startdate)->format('M j, Y') }}
         </div>
-      </a>
-    </div>
-    <div class="u-grid_col-4">
-      <a class="u-text-left" href="@permalink">
-        <h6 class="c-heading -h6">@published('F j, Y')</h6>
-        <h3 class="c-heading -h3">  @title</h3>
-      </a>
-    </div>
-    @else
-      <div class="u-grid_col-4">
-        <a class="u-text-right" href="@permalink">
-          <h6 class="c-heading -h6">@published('F j, Y')</h6>
-          <h3 class="c-heading -h3">@title</h3>
-        </a>
+        <div class="c-event-tile__type">
+          @term('event-category')
+        </div>
       </div>
-      <div class="u-grid_col-8">
-        <a class="news-post-slideshow" href="@permalink">
-          <div class="o-media">
-            <picture class="o-ratio u-16:9">
-              <img class="js-lazyload" data-src="https://picsum.photos/1500/1500">
-            </picture>
-          </div>
-        </a>
+      <div class="c-event-tile__block o-layout__item u-1/3">
+        <h3 class="c-event-tile__title">@field('event_title')</h3>
+        <h6 class="c-event-tile__subtitle">@field('event_subtitle')</h6>
       </div>
-    @endif
+      <div class="c-event-tile__block o-layout__item u-1/3">
+        <div class="c-event-tile__label">Date</div>
+        <div class="c-event-tile__description">
+          @if($startdate && $enddate)
+            @if( DateTime::createFromFormat('Y-m-d H:i:s', $startdate)->format('Y-m-d') == DateTime::createFromFormat('Y-m-d H:i:s', $enddate)->format('Y-m-d'))
+              <span>{{ DateTime::createFromFormat('Y-m-d H:i:s', $startdate)->format('l,') }}&nbsp;</span>
+              <span>{{ DateTime::createFromFormat('Y-m-d H:i:s', $startdate)->format('j F Y') }}&nbsp;</span>
+              @if(!$wholedate)
+                <span>{{ DateTime::createFromFormat('Y-m-d H:i:s', $startdate)->format('g:i a') }} - {{ DateTime::createFromFormat('Y-m-d H:i:s', $enddate)->format('g:i a') }}</span>
+              @endif
+            @else
+              <span>{{ DateTime::createFromFormat('Y-m-d H:i:s', $startdate)->format('l,') }}&nbsp;</span>
+              <span>{{ DateTime::createFromFormat('Y-m-d H:i:s', $startdate)->format('j F Y') }}&nbsp;</span>
+              @if(!$wholedate)
+                <span>{{ DateTime::createFromFormat('Y-m-d H:i:s', $startdate)->format('g:i a') }}</span>
+              @endif
+              <span>&nbsp;-&nbsp;</span>
+              <span>{{ DateTime::createFromFormat('Y-m-d H:i:s', $enddate)->format('l,') }}&nbsp;</span>
+              <span>{{ DateTime::createFromFormat('Y-m-d H:i:s', $enddate)->format('j F Y') }}&nbsp;</span>
+              @if(!$wholedate)
+                <span>{{ DateTime::createFromFormat('Y-m-d H:i:s', $enddate)->format('g:i a') }}</span>
+              @endif
+            @endif
+          @endif
+        </div>
+      </div>
+      @hasfield('event_location')
+      <div class="c-event-details__block o-layout__item u-1/3">
+        <div class="c-event-details__label">Location</div>
+        <span class="c-event-details__description">@field('event_location')</span>
+      </div>
+      @endfield
+
+    </div>
   </div>
-</div>
+</a>

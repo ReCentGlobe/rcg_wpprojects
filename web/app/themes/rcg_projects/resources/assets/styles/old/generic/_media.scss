@@ -1,0 +1,94 @@
+// ==========================================================================
+// Generic / Media
+// ==========================================================================
+
+//
+// 1. Setting `vertical-align` removes the whitespace that appears under `img`
+//    elements when they are dropped into a page as-is. Safer alternative to
+//    using `display: block;`.
+//
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; /* [1] */
+}
+
+//
+// Add the correct display in iOS 4-7.
+//
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+//
+// 2. Fluid media for responsive purposes.
+//
+img,
+svg {
+  max-width: 100%; /* [2] */
+  height: auto;
+
+  //
+  // 4. If a `width` and/or `height` attribute have been explicitly defined, let’s
+  //    not make the image fluid.
+  //
+  &[width], /* [4] */
+  &[height] {
+    /* [4] */
+    max-width: none;
+  }
+}
+
+//
+// 4. Offset `alt` text from surrounding copy.
+//
+img {
+  font-style: italic; /* [4] */
+}
+
+//
+// 5. SVG elements should fallback to their surrounding text color.
+//
+svg {
+  fill: currentColor; /* [5] */
+}
+
+// Transitions for Lazyload
+.js-lazyload {
+  opacity: 0;
+}
+
+.is-loaded {
+  animation: focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  opacity: 1;
+}
+
+@keyframes scaleout {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+

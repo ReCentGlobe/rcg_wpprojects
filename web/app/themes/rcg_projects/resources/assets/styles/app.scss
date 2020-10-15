@@ -1,36 +1,194 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Config...............Project-level configuration and feature switches.
+ * Core.................inuitcss’ core and setup settings.
+ * Global...............Project-wide variables and settings.
+ *
+ * TOOLS
+ * Font-size............A mixin which guarantees baseline-friendly line-heights.
+ * Clearfix.............Micro clearfix mixin.
+ * Hidden...............Mixin for hiding elements.
+ * Sass MQ..............inuitcss’ default media query manager.
+ *
+ * GENERIC
+ * Box-sizing...........Better default `box-sizing`.
+ * Normalize.css........A level playing field using @necolas’ Normalize.css.
+ * Reset................A tiny reset to complement Normalize.css.
+ * Shared...............Sensibly and tersely share some global commonalities
+ *                      (particularly useful when managing vertical rhythm).
+ *
+ * ELEMENTS
+ * Page.................Set up our document’s default `font-size` and
+ *                      `line-height`.
+ * Headings.............Very minimal (i.e. only font-size information) for
+ *                      headings 1 through 6.
+ * Images...............Base image styles.
+ * Tables...............Simple table styles.
+ *
+ * OBJECTS
+ * Wrapper..............Page constraint object.
+ * Layout...............Generic layout module.
+ * Media................Image- and text-like content side by side. The
+ *                      poster-child of OOCSS.
+ * Flag.................Table-layout-based advancement on the Media object.
+ * List-bare............Lists with no bullets or indents.
+ * List-inline..........A list whose items all site in a line.
+ * Box..................Simple boxing abstraction.
+ * Block................Image-on-top-of-text object.
+ * Ratio................A container for maintaining aspect ratio of content.
+ * Crop.................Provide a cropping context for media (images, etc.).
+ * Table................Classes for manipulating `table`s.
+ * Pack.................Pack items into available horizontal space.
+ *
+ * COMPONENTS
+ * Buttons..............An example button component, and how it fits into the
+ *                      inuitcss framework.
+ *
+ * UTILITIES
+ * Clearfix.............Bind our clearfix onto a utility class.
+ * Widths...............Simple width helper classes.
+ * Headings.............Reassigning our heading styles to helper classes.
+ * Spacings.............Nudge bits of the DOM around with these spacing
+ *                      classes.
+ * Responsive-Spacings..Enhances the function of normal spacings for
+ *                      responsive usage.
+ * Print................Reset-like styles taken from the HTML5 Boilerplate.
+ * Hide.................Helper classes to hide content
+ */
+
+// SETTINGS
+@import "settings/settings.config";
+@import "settings/settings.global";
+@import "~inuitcss/settings/settings.core";
+
+// TOOLS
+@import "~inuitcss/tools/tools.font-size";
+@import "~inuitcss/tools/tools.clearfix";
+@import "~inuitcss/tools/tools.hidden";
+@import "~sass-mq/mq";
+@import "tools/tools.aliases";
+@import "tools/tools.mixins";
+@import "tools/tools.functions";
+
+// GENERIC
+@import "~inuitcss/generic/generic.box-sizing";
+@import "~inuitcss/generic/generic.normalize";
+@import "~inuitcss/generic/generic.reset";
+@import "~inuitcss/generic/generic.shared";
+@import "generic/generic.fonts";
+@import "generic/generic.media";
+@import "generic/generic.button";
+@import "generic/generic.form";
+
+// ELEMENTS
+@import "~inuitcss/elements/elements.page";
+@import "~inuitcss/elements/elements.headings";
+@import "~inuitcss/elements/elements.images";
+@import "~inuitcss/elements/elements.tables";
+@import "elements/elements.page";
+
+// OBJECTS
+//
+// Uncomment and add to this section as necessary.
+@import "~inuitcss/objects/objects.wrapper";
+@import "~inuitcss/objects/objects.layout";
+@import "~inuitcss/objects/objects.media";
+@import "~inuitcss/objects/objects.flag";
+@import "~inuitcss/objects/objects.list-bare";
+@import "~inuitcss/objects/objects.list-inline";
+@import "~inuitcss/objects/objects.box";
+@import "~inuitcss/objects/objects.block";
+@import "objects/objects.button";
+@import "~inuitcss/objects/objects.ratio";
+@import "~inuitcss/objects/objects.crop";
+@import "~inuitcss/objects/objects.table";
+@import "~inuitcss/objects/objects.pack";
+@import "objects/objects.scroll";
+@import "objects/objects.gutenberg-content";
+@import "objects/objects.container";
+@import "objects/objects.section";
+@import "objects/objects.form";
+@import "objects/objects.table";
+
+// COMPONENTS
+//
+// Build and include your project’s UI components here.
+@import "components/components.ajax-filter";
+@import "components/components.blog";
+@import "components/blogarchive";
+@import "components/button";
+@import "components/components.event";
+@import "components/components.event-tile";
+@import "components/components.event-details";
+@import "components/components.intro";
+@import "components/components.footer";
+@import "components/eventarchive";
+@import "components/fixed";
+@import "components/components.form";
+@import "components/components.header-navigation";
+@import "components/heading";
+@import "components/components.languageswitcher";
+@import "components/loading";
+@import "components/page-header";
+@import "components/partners";
+@import "components/peoplearchive";
+@import "components/scrollbar";
+@import "components/components.slider";
+@import "components/components.page-head";
+
+// UTILITIES
+@import "~inuitcss/utilities/utilities.clearfix";
+
+// Be aware that enabling offsets produces a large chunk of classes which might
+// bloat your CSS, depending on the amount of breakpoints you defined.
+// Only set this to `true` if you are absolutely sure about what you are doing.
+$inuit-offsets: false;
+@import "~inuitcss/utilities/utilities.widths";
+@import "~inuitcss/utilities/utilities.headings";
+@import "~inuitcss/utilities/utilities.spacings";
+@import "~inuitcss/utilities/utilities.responsive-spacings";
+@import "~inuitcss/utilities/utilities.print";
+@import "~inuitcss/utilities/utilities.hide";
+@import "utility/utility.bleed";
+@import "utility/utlity.backgrounds";
+
+/*
 // Settings
 // ==========================================================================
-@import "settings/colors";
-@import "settings/config";
-@import "settings/variables";
+//@import "settings/colors";
+//@import "settings/config";
+//@import "settings/variables";
 
 @import "~tailwindcss/base.css";
 @import "settings/postflight";
 @import "~tailwindcss/components.css";
 @import "~tailwindcss/utilities.css";
-@import "settings/headings";
+//@import "settings/headings";
 
 // ==========================================================================
 // Tools
 // ==========================================================================
-@import "tools/functions";
-@import "tools/mixins";
-@import "tools/fonts";
-@import "tools/layout";
+//@import "tools/functions";
+//@import "tools/mixins";
+//@import "tools/fonts";
+//@import "tools/layout";
+//@import "tools/widths";
 // @import "tools/family";
 
 // Generic
 // ==========================================================================
-@import "node_modules/normalize.css/normalize";
-@import "generic/generic";
-@import "generic/media";
-@import "generic/form";
-@import "generic/button";
+//@import "node_modules/normalize.css/normalize";
+//@import "generic/generic";
+//@import "generic/media";
+//@import "generic/form";
+//@import "generic/button";
 
 // Elements
 // ==========================================================================
-@import "elements/fonts";
-@import "elements/page";
+//@import "elements/fonts";
+//@import "elements/page";
 
 // Objects
 // ==========================================================================
@@ -40,7 +198,7 @@
 @import "objects/layout";
 // @import "objects/crop";
 // @import "objects/table";
-@import "objects";
+//@import "objects";
 
 // Vendors
 // ==========================================================================
@@ -49,6 +207,7 @@
 // Components
 // ==========================================================================
 @import "components/scrollbar";
+@import "components/ajax-filter";
 @import "components/heading";
 @import "components/button";
 @import "components/form";
@@ -62,18 +221,19 @@
 @import "components/blogarchive";
 @import "components/blog";
 @import "components/peoplearchive";
+@import "components/fixed";
 
 /** Partials */
-@import "partials/header";
+//@import "partials/header";
 
 // Utilities
 // ==========================================================================
-@import "utilities/ratio";
-@import "utilities/grid";
+//@import "utilities/ratio";
+//@import "utilities/grid";
 //@import "utilities/widths";
-@import "utilities/align";
-@import "utilities/backgrounds";
-// @import "utilities/helpers";
+//@import "utilities/align";
+//@import "utilities/backgrounds";
+//@import "utilities/helpers";
 // @import "utilities/states";
 // @import "utilities/spacing";
 // @import "utilities/print";

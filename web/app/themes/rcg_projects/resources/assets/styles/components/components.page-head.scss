@@ -1,0 +1,22 @@
+.c-page-head {
+  &__meta {
+  }
+  &__navigation {
+    display: flex;
+    flex-flow: row;
+  }
+
+  &.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+  &__divider {
+    border-top: 1px dotted #e2e1dd;
+  }
+  &.is-fixed &__divider {
+    border-top: 1px dotted var(--dark-color);
+  }
+}

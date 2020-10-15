@@ -1,8 +1,8 @@
 .c-slider {
   &__title {
-    @include font-size(64.8px);
+    font-size: 54px;
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 1rem;
     transform: translateY(0);
     opacity: 1;
     position: relative;
@@ -29,9 +29,21 @@
     }
   }
   &__description {
-    @include font-size(27px, 1.5);
-    //font-size: 27px;
+    //@include font-size(28px, 2.25rem);
+    font-size: rem(23px);
     margin-top: 1rem;
-    //line-height: 1.5;
+  }
+}
+
+.c-frontpage-slider {
+  position: relative;
+  overflow: hidden;
+  &__background {
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    overflow: hidden;
   }
 }

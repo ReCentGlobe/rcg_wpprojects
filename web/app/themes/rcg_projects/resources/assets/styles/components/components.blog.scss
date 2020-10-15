@@ -1,0 +1,70 @@
+.c-blog {
+  &.-single {
+    transition: 0.1s ease-in-out;
+    transition-property: color, background-color, border-color, box-shadow, top;
+    margin-bottom: $inuit-global-spacing-unit-large;
+  }
+  &__link {
+    position: relative;
+    display: block;
+    width: 100%;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      bottom: -10px;
+      left: -10px;
+      z-index: -1;
+      background-color: #fff;
+      box-shadow: none;
+      transition: box-shadow 0.25s ease-in-out;
+    }
+    @include u-hocus {
+      text-decoration: none;
+      &:before {
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+        top: -30px;
+        right: -30px;
+        bottom: -30px;
+        left: -30px;
+      }
+    }
+  }
+  &__media {
+    margin-bottom: $inuit-global-spacing-unit-small;
+  }
+  &__content {
+    color: var(--dark-color);
+    text-align: left;
+  }
+  &__title {
+    @include font-size(22px);
+    font-weight: 700;
+    display: block;
+    color: var(--dark-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
+  }
+  &__subtitle {
+    @include font-size(16px);
+    color: #b6b6b6;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inherit;
+    max-width: 100%;
+    margin-bottom: $inuit-global-spacing-unit-small;
+  }
+  &__excerpt {
+    @include font-size(16px, 1.5);
+    margin-top: 2rem;
+    color: var(--dark-color);
+  }
+}

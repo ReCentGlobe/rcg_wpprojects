@@ -1,0 +1,16 @@
+.c-intro {
+  padding: 0;
+
+  &__content {
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
+    color: var(--white);
+    padding-top: calc(#{$inuit-global-spacing-unit-large} * 2);
+    padding-bottom: calc(#{$inuit-global-spacing-unit-large});
+  }
+  &__headline {
+    @include font-size(52px, 84px);
+    margin: 0;
+  }
+}

@@ -1,0 +1,37 @@
+.c-event-details {
+  margin-bottom: $inuit-global-spacing-unit-large;
+
+  &__type {
+    padding-left: $inuit-global-spacing-unit-tiny;
+  }
+
+  &__type,
+  &__date {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 700;
+    @include font-size(12px);
+    text-transform: uppercase;
+  }
+
+  &__title {
+    @include font-size(22px);
+    margin: 0;
+  }
+  &__subtitle {
+    margin: 0;
+  }
+
+  &__label {
+    display: block;
+    align-self: flex-start;
+    color: var(--primary-color);
+    font-weight: 700;
+    @include font-size(12px);
+    text-transform: uppercase;
+  }
+  &__description {
+    font-weight: 700;
+    @include font-size(18px, 1.38889);
+  }
+}

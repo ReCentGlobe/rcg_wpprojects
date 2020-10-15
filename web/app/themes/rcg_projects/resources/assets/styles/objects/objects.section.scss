@@ -1,0 +1,22 @@
+.o-section {
+  padding-bottom: $inuit-global-spacing-unit-huge;
+  padding-top: $inuit-global-spacing-unit-large;
+  &__header {
+  }
+  &__body {
+  }
+  &__footer {
+  }
+  &__headline {
+    @include font-size(52px, 84px);
+    font-weight: 700;
+    &:after {
+      content: "—";
+      display: block;
+      color: var(--primary-color);
+      font-weight: 400;
+      padding-top: 1rem;
+    }
+    margin-bottom: 1rem;
+  }
+}

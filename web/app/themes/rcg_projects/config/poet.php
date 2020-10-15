@@ -40,35 +40,6 @@ return [
                 'text_domain' => 'sage'
             ]
         ],
-        'people' => [
-            'public' => true,
-            'publicly_queryable' => true,
-            'show_ui' => true,
-            'show_in_menu' => true,
-            'query_var' => true,
-            'has_archive' => 'people',
-            'show_in_rest' => true,
-            'show_in_graphql' => true,
-            'graphql_single_name' => 'member',
-            'graphql_plural_name' => 'members',
-            'hierarchical' => false,
-            'menu_icon' => 'dashicons-businessperson',
-            'menu_position' => null,
-            'supports' => ['title'],
-            'can_export' => true,
-            'capability_type' => 'post',
-            'rewrite' => [
-                'slug' => 'people',
-                'with_front' => false,
-                'feeds' => true,
-                'pages' => true
-            ],
-            'labels' => [
-                'singular' => 'Person',
-                'plural' => 'People',
-                'text_domain' => 'sage'
-            ]
-        ],
         'blog' => [
             'public' => true,
             'publicly_queryable' => true,
@@ -126,23 +97,6 @@ return [
             'rewrite' => [
                 'slug' => 'event-category',
                 'with_front' => true
-            ]
-        ],
-        'people-category' => [
-            'links' => ['people'],
-            'labels' => [
-                'singular' => 'People category',
-                'plural' => 'People categories',
-                'text_domain' => 'sage'
-            ],
-            'public' => true,
-            'show_admin_column' => true,
-            'publicly_queryable' => true,
-            'show_in_rest' => true,
-            'query_var' => true,
-            'rewrite' => [
-                'slug' => 'people-category',
-                'with_front' => false
             ]
         ],
     ],

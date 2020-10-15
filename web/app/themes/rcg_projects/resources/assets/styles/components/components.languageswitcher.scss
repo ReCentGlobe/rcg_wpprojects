@@ -1,0 +1,36 @@
+.c-languageswitcher {
+  margin-top: $inuit-global-spacing-unit-small;
+  margin-bottom: $inuit-global-spacing-unit-small;
+  display: flex;
+  justify-content: space-between;
+
+  &__list {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 0;
+
+    & li {
+      @include font-size(14px);
+      padding: 0 $inuit-global-spacing-unit-tiny;
+      text-transform: uppercase;
+      color: var(--dark-color);
+      text-decoration: none;
+      font-weight: 500;
+      border-right: 1px solid var(--dark-color);
+    }
+    & li:last-child {
+      border-right: none;
+    }
+  }
+  &__homelink {
+    @include font-size(14px);
+    text-transform: uppercase;
+    letter-spacing: 1.125px;
+    font-weight: 600;
+  }
+
+  @include mq($until: mobile) {
+    padding: $inuit-global-spacing-unit-tiny 0;
+  }
+}

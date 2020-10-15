@@ -1,0 +1,185 @@
+.c-filter-wrapper {
+  position: relative;
+}
+
+.c-ajax-filter {
+  display: flex;
+  flex-flow: row wrap;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 2em 0;
+  transition: max-height, opacity 0.2s ease-out;
+  max-height: 0;
+  opacity: 0;
+
+  &.is-visible {
+    max-height: 1000px;
+    opacity: 1;
+  }
+
+  &__wrapper {
+    flex-basis: 100%;
+    display: flex;
+    margin: -1em;
+    flex-flow: column;
+
+    @include mq($from: mobile) {
+      flex-flow: row;
+      margin: 0 -1em;
+    }
+  }
+  &__input {
+    flex-basis: 100%;
+    margin: 1em;
+
+    @include mq($from: mobile) {
+      flex-basis: 250px;
+      margin: 0 1em;
+
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+  }
+
+  &__clear {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    transition: 0.2s ease-in-out;
+    transition-property: color, background-color, border;
+    font-size: 0.66667rem;
+    line-height: 1.25;
+
+    @include u-hocus {
+      color: var(--primary-color);
+      background-color: var(--white);
+      border-color: var(--primary-color);
+    }
+  }
+
+  & .vdp-datepicker {
+    width: 250px;
+
+    & .vdp-datepicker__calendar {
+      font-size: 0.8em;
+      width: 250px;
+      color: var(--dark-color);
+    }
+
+    & .vdp-datepicker__calendar .cell.selected {
+      font-weight: 600;
+      color: var(--dark-color);
+      background: var(--secondary-color);
+    }
+  }
+}
+
+.c-category-filter {
+  margin-top: 2em;
+
+  @include mq($from: mobile) {
+    margin-top: 1em;
+  }
+
+  &__list {
+    padding: 0;
+    margin: -0.5em 0 0;
+    list-style: none;
+  }
+  &__item {
+    position: relative;
+    display: inline-flex;
+    background: transparent;
+    margin-top: 0.5em;
+
+    & input[type="checkbox"] {
+      display: none;
+    }
+    & input[type="checkbox"] + label {
+      cursor: pointer;
+      display: inline-block;
+      background: transparent;
+      color: inherit;
+      user-select: none;
+      margin: 0;
+      overflow: visible;
+      -webkit-appearance: none;
+      box-sizing: border-box;
+      vertical-align: middle;
+      text-align: center;
+      text-decoration: none;
+      transition: 0.1s ease-in-out;
+      transition-property: color, background-color, border-color;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      padding: 1em 1.5em;
+      word-break: break-all;
+      border: 1px solid #fff;
+      border-radius: 20px;
+    }
+    & input[type="checkbox"] + label:hover {
+      background: var(--white);
+      border-color: var(--white);
+      opacity: 0.6;
+      color: var(--primary-color);
+    }
+    & input[type="checkbox"]:checked + label {
+      background: var(--white);
+      border-color: var(--white);
+      opacity: 1;
+      color: var(--primary-color);
+    }
+  }
+}
+
+.c-enable-filter {
+  display: inline-flex;
+  flex-flow: row;
+  align-items: center;
+  color: var(--dark-color);
+  background: transparent;
+  opacity: 0.6;
+  position: absolute;
+  right: 0;
+  top: 2rem;
+  border: 1px solid;
+  transition: color, background-color, opacity 0.2s ease-out;
+  font-size: 0.66667rem;
+  line-height: 1.25;
+  min-width: 0;
+  padding: 0.625em 1em;
+  font-weight: 700;
+  letter-spacing: 1.14px;
+  text-transform: uppercase;
+
+  @include u-hocus {
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+  & svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.js-filter-wrapper.is-active {
+  & .c-enable-filter {
+    color: var(--white);
+    border-color: var(--white);
+    opacity: 1;
+    transition: color, background-color, opacity 0.2s ease-out;
+
+    @include u-hocus {
+      color: var(--primary-color);
+      background-color: var(--white);
+      border-color: var(--white);
+    }
+  }
+}

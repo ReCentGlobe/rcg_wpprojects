@@ -1,21 +1,31 @@
-<section class="o-container flex bg-white">
-  <article @php(post_class('o-gutenberg-content flex flex-col px-8 md:px-16 lg:px-0 max-w-4xl mx-auto'))>
-    <header>
-      <h1 class="c-heading -h2">
-        {!! $title !!}
-      </h1>
-
-      @include('partials/entry-meta')
-    </header>
-
-    <div class="entry-content">
-      @content
+<div class="c-intro u-bg--primary o-section">
+  <div class="o-section__content o-container">
+    <div class="c-intro__content">
+      <h1 class="c-intro__headline">{!! $title !!}</h1>
     </div>
+  </div>
 
-    <footer>
-      {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-    </footer>
-  </article>
+</div>
+
+<section data-scroll class="c-event o-section o-container">
+  <div class="o-section__header">
+    <div class="c-event-details o-layout">
+      <div class="c-event-details__block o-layout__item u-3/12">
+        <div class="c-event-details__label">Published</div>
+        <span class="c-event-details__description">@published</span>
+      </div>
+      <div class="c-event-details__block o-layout__item u-3/12">
+        <div class="c-event-details__label">Author</div>
+        <span class="c-event-details__description">@author</span>
+      </div>
+
+
+    </div>
+  </div>
+  <div data-scroll class="o-section__body o-gutenberg-content">
+    @content
+  </div>
 </section>
+
 
 

@@ -22,7 +22,10 @@ class EventArchive extends Composer
     {
         return [
             'title' => $this->title(),
-            'events' => $this->queryEvents()
+            'sections' => $this->query_taxsection(),
+            'categories' => $this->query_eventcategory(),
+            'events' => $this->query_events(),
+            'currentPage' => $this->currentPage()
         ];
     }
 
@@ -64,16 +67,74 @@ class EventArchive extends Composer
         return get_the_title();
     }
 
+    public function query_eventcategory()
+    {
+        return new \WP_Term_Query(array(
+            'taxonomy' => 'event-category',
+            'orderby' => 'menu_order',
+            'order' => 'ASC',
+        ));
+    }
 
-    public function queryEvents(): \WP_Query
+
+    public function query_taxsection()
+    {
+        $ids_to_exclude = array();
+        $get_terms_to_exclude = get_terms(array(
+            'fields' => 'ids',
+            'slug' => array(
+                'central-project',
+                'integrated-research-training-group',
+                'thematic-working-groups'
+            ),
+            'taxonomy' => 'project-section'
+        ));
+
+        if (!is_wp_error($get_terms_to_exclude) &&
+            count($get_terms_to_exclude) > 0
+        ) {
+            $ids_to_exclude = $get_terms_to_exclude;
+        }
+
+        return new \WP_Term_Query(array(
+            'taxonomy' => 'project-section',
+            'orderby' => 'menu_order',
+            'order' => 'ASC',
+            'exclude' => $ids_to_exclude
+        ));
+    }
+
+    public function currentPage()
+    {
+        $page = get_query_var('paged', 1);
+
+        if ($page === 0) {
+            $page = 1;
+        }
+
+        return $page;
+    }
+
+    public function query_events(): \WP_Query
     {
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+        $today = date(
+            'Ymd',
+            mktime(0, 0, 0, date('m'), date('d') + 14, date('Y'))
+        );
         return new \WP_Query(array(
             'post_type' => 'event',
-            'orderby' => 'publish_date',
+            'orderby' => 'meta_value',
+            'meta_query' => array(
+                array(
+                    'key' => 'event_startdate',
+                    'value' => $today,
+                    'type' => 'DATETIME',
+                    'compare' => '<'
+                )
+            ),
             'order' => 'DESC',
             'paged' => $paged
         ));
     }
-
 }

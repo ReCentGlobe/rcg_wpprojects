@@ -16,6 +16,7 @@ class Navigation extends Composer
         'components.c-navigation',
         'partials.footer',
         'partials.header',
+        'partials.fixed-header',
     ];
 
     /**

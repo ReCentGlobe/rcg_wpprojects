@@ -1,6 +1,8 @@
-<section class="o-container flex bg-white">
-  <div class="o-gutenberg-content flex flex-col px-8 md:px-16 lg:px-0 max-w-4xl mx-auto">
-    <h2 class="c-heading -h2">{!! $title !!}</h2>
+<section data-scroll class="o-section o-container">
+  <div class="o-section__header">
+    <h2 class="o-section__headline">{!! $title !!}</h2>
+  </div>
+  <div data-scroll class="o-section__body o-gutenberg-content">
     @content
   </div>
 </section>

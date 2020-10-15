@@ -68,7 +68,8 @@ body {
     width: 100%;
     position: fixed;
     z-index: 999;
-    background: inherit;
+    top: 0;
+    background: var(--white);
     left: 0;
     height: 5px;
   }
@@ -78,6 +79,7 @@ body {
   }
   &:after {
     bottom: 0;
+    top: auto;
   }
 }
 
