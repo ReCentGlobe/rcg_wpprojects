@@ -1,0 +1,56 @@
+.has-scroll-smooth {
+/*  & .js-header-navigation,
+  & .js-languageswitcher,
+  & .js-header-logo,
+  & .js-main-content {
+    opacity: 0;
+    transform: translateX(-10px);
+  }*/
+}
+
+[data-load-container] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+html.is-loaded [data-load-container] {
+  opacity: 1;
+}
+
+.js-lazyload {
+  opacity: 0;
+}
+
+.is-loaded {
+  -webkit-animation: focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  opacity: 1;
+}
+
+@-webkit-keyframes focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}

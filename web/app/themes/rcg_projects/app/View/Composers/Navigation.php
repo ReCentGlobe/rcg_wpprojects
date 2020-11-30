@@ -28,7 +28,7 @@ class Navigation extends Composer
     {
         return [
             'navigation' => $this->navigation(),
-            'footer_navigation' => $this->footer()
+            'footernavigation' => $this->footer()
         ];
     }
 
@@ -53,10 +53,10 @@ class Navigation extends Composer
      */
     public function footer()
     {
-        if (Navi::build('footer')->isEmpty()) {
+        if (Navi::build('footer_navigation')->isEmpty()) {
             return;
         }
 
-        return Navi::build('footer')->toArray();
+        return Navi::build('footer_navigation')->toArray();
     }
 }

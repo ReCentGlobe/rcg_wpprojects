@@ -6,6 +6,7 @@
 //@import "settings/colors";
 //@import "settings/config";
 //@import "settings/variables";
+@import "generic/generic.fonts";
 @import "settings/settings.config";
 @import "settings/settings.global";
 @import "~inuitcss/settings/settings.core";
@@ -34,9 +35,70 @@
   font-family: $global-font-family;
 }
 
+.editor-styles-wrapper {
+  & p a {
+    color: var(--primary-color);
+  }
+  & p {
+    @include font-size(20px);
+    margin-bottom: 1rem;
+  }
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    margin-bottom: rem(30px, 18px);
+  }
+  & h2 {
+    @include font-size(52px, 84px);
+    //font-size: rem($font-size-h2, 18px);
+    font-weight: 700;
+    &:after {
+      content: "—";
+      display: block;
+      color: var(--primary-color);
+      font-weight: 400;
+      padding-top: 1rem;
+    }
+    margin-bottom: 1rem;
+  }
+  & h3 {
+    @include font-size(41px, 68px);
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-weight: 800;
+    margin-bottom: rem(2.5px, 18px);
+  }
+  & h4 {
+    @include font-size(32px, 55px);
+  }
+  & h5 {
+    @include font-size(25px, 45px);
+  }
+  & h6 {
+    @include font-size(16px, 32px);
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
 .is-style-rcg-people {
+  @include mq($until: mobile) {
+    display: flex;
+  }
   & tr {
     border-top: 2px solid var(--dark-color);
+
+    @include mq($until: mobile) {
+      display: flex;
+      flex-flow: column;
+    }
 
     & td {
       @include font-size(16px);
@@ -56,6 +118,30 @@
       color: var(--primary-color);
       margin-bottom: $inuit-global-spacing-unit-tiny;
       font-weight: 700;
+    }
+  }
+}
+
+.is-style-rcg-block-primary {
+  background: var(--primary-color);
+  color: white;
+  margin-bottom: 4rem;
+
+  @include mq($until: tablet) {
+    & .wp-block-media-text__content {
+      padding: 2rem;
+    }
+  }
+}
+
+.is-style-rcg-block-secondary {
+  background: var(--secondary-color);
+  color: white;
+  margin-bottom: 4rem;
+
+  @include mq($until: tablet) {
+    & .wp-block-media-text__content {
+      padding: 2rem;
     }
   }
 }

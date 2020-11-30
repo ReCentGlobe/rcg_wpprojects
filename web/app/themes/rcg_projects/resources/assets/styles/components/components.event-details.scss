@@ -31,6 +31,7 @@
     text-transform: uppercase;
   }
   &__description {
+    display: block;
     font-weight: 700;
     @include font-size(18px, 1.38889);
   }

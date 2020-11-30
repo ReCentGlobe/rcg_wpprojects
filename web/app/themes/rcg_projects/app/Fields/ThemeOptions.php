@@ -6,10 +6,10 @@ use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
 acf_add_options_page([
-    'page_title' => get_bloginfo('name') . ' Theme Options',
-    'menu_title' => 'Theme Options',
+    'page_title' => get_bloginfo('name') . ' Project Settings',
+    'menu_title' => 'Project Settings',
     'menu_slug'  => 'theme-options',
-    'capability' => 'edit_theme_options',
+    'capability' => 'manage_options',
     'position'   => '999',
     'autoload'   => true
 ]);
@@ -31,6 +31,7 @@ class ThemeOptions extends Field
             /**
              * Colours Tab
              */
+            ->addTab('Theme')
             ->addGroup('theme')
             ->addColorPicker('primary_color',[
                 'wrapper' => [
@@ -56,11 +57,16 @@ class ThemeOptions extends Field
             /**
              * Newsletter Tab
              */
+            ->addTab('Newsletter')
             ->addGroup('newsletter')
                 ->addTrueFalse('enabled')
                 ->addText('headline')
                 ->addTextarea('content')
                 ->addLink('link')
+            ->endGroup()
+            ->addTab('Imprint')
+            ->addGroup('imprint')
+                ->addWysiwyg('content')
             ->endGroup();
 
         return $projects->build();

@@ -25,7 +25,13 @@ class Frontpage extends Field
             ->addGroup('header')
             ->addText('headline')
             ->addWysiwyg('content')
+            ->addTrueFalse('video-enabled')
             ->addImage('image')
+            ->addGroup('video')
+                ->addFile('mp4')
+                ->addFile('webm')
+                ->addFile('poster')
+            ->endGroup()
             ->addRepeater('logowrapper', [
                 'layout' => 'row',
                 'button_label' => 'Add Logo',

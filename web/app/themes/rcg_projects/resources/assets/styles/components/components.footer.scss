@@ -1,6 +1,10 @@
 .c-footer {
   & > .o-section {
     padding: $inuit-global-spacing-unit-huge 0 0;
+
+    @include mq($until: tablet) {
+      padding: 0;
+    }
   }
   &__logo {
     display: block;
@@ -19,12 +23,24 @@
     display: block;
     height: 100px;
     margin-top: -100px;
+
+    @include mq($until: tablet) {
+      height: rem(60px);
+      margin-top: rem(-60px);
+    }
   }
   &__newsletter {
-    & p {
+    & h4 {
       font-weight: 700;
       @include font-size(35px, 1.14286);
-      letter-spacing: .07px;
+      letter-spacing: 0.07px;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+    }
+    & p {
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0.07px;
       margin-top: 0;
       margin-bottom: 1.5em;
     }
@@ -39,6 +55,11 @@
     white-space: nowrap;
     list-style: none;
     background: var(--secondary-color);
+
+    @include mq($until: tablet) {
+      padding: $inuit-global-spacing-unit-tiny
+      calc(#{$inuit-global-spacing-unit-tiny} * 2);
+    }
     & > li {
       display: inline-block;
       height: 100%;
@@ -48,13 +69,26 @@
       font-weight: bold;
       @include font-size(15px);
     }
+    & li a {
+      color: inherit;
+    }
   }
   &__box {
     position: relative;
-    min-height: 400px;
+    min-height: rem(400px);
     padding-top: $inuit-global-spacing-unit-large;
+    @include mq($until: tablet) {
+      min-height: rem(250px);
+    }
     &--left {
       padding-right: $inuit-global-spacing-unit-large;
+      @include mq($until: tablet) {
+        margin-right: calc((100vw - 100%) / -2);
+        margin-left: calc((100vw - 100%) / -2);
+        padding-right: calc((100vw - 100%) / 2);
+        padding-bottom: 70px;
+        padding-left: calc((100vw - 100%) / 2);
+      }
     }
     &--right {
       margin-right: calc((100vw - 200%) / -2 + 0.5 * 20px);
@@ -64,6 +98,18 @@
       color: var(--white);
       background: var(--primary-color);
       padding-left: $inuit-global-spacing-unit-large;
+
+      @include mq($until: tablet) {
+        margin-right: calc((100vw - 100%) / -2);
+        margin-left: calc((100vw - 100%) / -2);
+        padding-right: calc((100vw - 100%) / 2);
+        padding-bottom: 70px;
+        padding-left: calc((100vw - 100%) / 2);
+      }
+    }
+
+    & img {
+      width: 100%;
     }
   }
 }

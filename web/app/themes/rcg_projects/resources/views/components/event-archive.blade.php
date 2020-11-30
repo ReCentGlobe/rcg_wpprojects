@@ -1,4 +1,4 @@
-<section id="event-list" class="o-section o-container">
+<section data-module-events id="event-list" class="o-section o-container">
   <div class="o-section__header">
     <h2 class="o-section__headline">Events</h2>
   </div>

@@ -50,53 +50,43 @@
       </div>
     </div>
   </div>--}}
-  <section class="o-section c-frontpage-slider js-frontpage-slider">
+  <section data-module-header class="o-section c-frontpage-slider js-frontpage-slider">
     <div class="o-section__content o-container -canvas"  data-scroll>
       <div class="c-footer__content o-layout">
-        <div class="o-layout__item u-1/2">
+        <div class="o-layout__item u-1/2@tablet">
           <h2 class="c-slider__title" data-scroll data-scroll-speed="2" data-scroll-delay="1">
             <span class="js-slider__title">@field('header_headline')</span>
           </h2>
           <div class="c-slider__description" data-scroll data-scroll-speed="2" data-scroll-delay="1">@field('header_content')</div>
         </div>
-        <div class="o-layout__item u-1/2 c-fixed_wrapper c-frontpage-slider__background" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat style="clip-path:polygon(10% 0, 100% 0%, 100% 100%, 0 100%)">
-          <div class="c-fixed_target" id="fixed-target"></div>
-          <div class="c-fixed" data-scroll data-scroll-sticky data-scroll-target="#fixed-target" style="background-image: url(@field('header_image','url'))"></div>
+        <div class="o-layout__item u-1/2@tablet c-fixed_wrapper c-frontpage-slider__background" data-scroll data-scroll-repeat style="clip-path:polygon(10% 0, 100% 0%, 100% 100%, 0 100%)">
+          <div class="c-fixed_target @if(get_field('header_video-enabled')) -video @endif" id="fixed-target"></div>
+          @if(get_field('header_video-enabled'))
+            <video class="c-fixed -video" data-scroll data-scroll-sticky data-scroll-target="#fixed-target"  loop muted autoplay>
+              <!-- MP4 must be first for iPad! -->
+              <source src="@field('header_video_mp4','url')" type="video/mp4"><!-- Safari / iOS, IE9 -->
+            </video>
+            <button data-header="mute" class="c-frontpage-slider__mute">
+              <svg id="unmute">
+                <use href="@asset('svg/svgMap.svg#speakerIcon')"/>
+              </svg>
+              <svg id="mute">
+                <use href="@asset('svg/svgMap.svg#muteIcon')"/>
+              </svg>
+            </button>
+            <button data-header="fullscreen" class="c-frontpage-slider__fullscreen">
+              <svg id="fullscreen">
+                <use href="@asset('svg/svgMap.svg#fullscreenIcon')"/>
+              </svg>
+            </button>
+          @else
+            <div class="c-fixed" data-scroll data-scroll-sticky data-scroll-target="#fixed-target" style="background-image: url(@field('header_image','url'))"></div>
+          @endif
         </div>
 
       </div>
     </div>
   </section>
-{{--
-  <div class="c-frontpage-slider js-frontpage-slider" data-scroll data-scroll-call="contentAnimation">
-    <div class="o-layout flex bg-white flex-grow" style="min-height:60vh;">
-      <div class="o-layout__item u-1/2">
-        <div class="c-slider u-padding-large">
-          <h2 class="c-slider__title" data-scroll data-scroll-speed="2" data-scroll-delay="1">
-            <span class="js-slider__title">@field('header_headline')</span>
-          </h2>
-          <div class="c-slider__description" data-scroll data-scroll-speed="2" data-scroll-delay="1">@field('header_content')</div>
-        </div>
-      </div>
-      <div class="o-layout__item u-1/2 c-fixed_wrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat style="clip-path:polygon(10% 0, 100% 0%, 100% 100%, 0 100%)">
-        <div class="c-fixed_target" id="fixed-target"></div>
-        <div class="c-fixed" data-scroll data-scroll-sticky data-scroll-target="#fixed-target" style="background-image: url(@field('header_image','url'))"></div>
-      </div>
-    </div>
-    <div style="" class="c-partners u-hidden" data-scroll data-scroll-speed="1" data-scroll-delay="1">
-      <div class="u-grid">
-        @fields('header_logowrapper')
-        <div class="c-partners__logo u-grid_col-2">
-          <a href="@sub('link','url')" target="@sub('link','target')" title="@sub('link','name')">
-            <img src="@sub('logo','url')" srcset="@sub('logo','srcset')" alt="@sub('logo','alt')">
-          </a>
-        </div>
-        @endfields
-      </div>
-    </div>
-
-  </div>
---}}
 
   <section class="o-container flex bg-white">
     <div data-scroll class="o-gutenberg-content flex flex-col px-8 md:px-16 lg:px-0 max-w-4xl mx-auto">

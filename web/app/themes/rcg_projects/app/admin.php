@@ -68,19 +68,19 @@ add_action(
 add_filter(
     'admin_menu',
     function (): void {
-        //remove_menu_page('tools.php');
+        remove_menu_page('tools.php');
         remove_menu_page('gutenberg');
         //remove_menu_page('plugins.php');
         remove_menu_page('edit.php');
         remove_menu_page('edit-comments.php');
-        //remove_menu_page('wp_stream');
+        remove_menu_page('wp_stream');
         remove_menu_page('wp-graphiql/wp-graphiql.php');
-        //remove_menu_page('themes.php');
+        remove_menu_page('themes.php');
         remove_submenu_page('options-general.php', 'options-media.php');
         remove_submenu_page('options-general.php', 'options-privacy.php');
         remove_submenu_page('options-general.php', 'options-writing.php');
         //remove_submenu_page('options-general.php', 'options-reading.php');
-        //remove_submenu_page('options-general.php', 'options-permalink.php');
+        remove_submenu_page('options-general.php', 'options-permalink.php');
         remove_submenu_page('options-general.php', 'disable_comments_settings');
         remove_submenu_page('options-general.php', 'duplicatepost');
         remove_submenu_page('options-general.php', 'options-discussion.php');

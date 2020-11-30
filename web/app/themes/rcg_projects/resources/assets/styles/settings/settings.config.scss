@@ -23,12 +23,12 @@ $inuit-fractions: 1 2 3 4 5 6 7 8 9 10 11 12 !default;
 // Breakpoints
 $mq-responsive: true;
 $mq-breakpoints: (
-  mobile: 320px,
+  mobile: 375px,
   tablet: 740px,
   desktop: 980px,
   wide: 1300px,
   // Tweakpoints
-    desktopAd: 810px,
+  desktopAd: 810px,
   mobileLandscape: 480px,
 );
 

@@ -39,11 +39,52 @@
   position: relative;
   overflow: hidden;
   &__background {
+    display: block;
     height: 100vh;
     position: absolute;
-    z-index: -1;
+    //z-index: -1;
     right: 0;
     top: 0;
     overflow: hidden;
+
+    @include mq($until: tablet) {
+      display: none;
+    }
+  }
+
+  &__fullscreen,
+  &__mute {
+    height: 2rem;
+    width: 2rem;
+    z-index: 900;
+    position: absolute;
+    bottom: 25vh;
+    color: var(--white);
+    transition: 0.2s color ease-in-out;
+
+    @include u-hocus() {
+      color: var(--primary-color);
+    }
+  }
+
+  &__fullscreen {
+    right: 5vw;
+  }
+  &__mute {
+    right: 2vw;
+    & #mute {
+      display: block;
+    }
+    & #unmute {
+      display: none;
+    }
+    &.is-active {
+      & #mute {
+        display: none;
+      }
+      & #unmute {
+        display: block;
+      }
+    }
   }
 }

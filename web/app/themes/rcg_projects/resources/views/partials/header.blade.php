@@ -29,9 +29,10 @@
     </div>
   </div>
   <div class="c-page-head__divider"></div>
-  <nav class="c-page-head__navigation o-container">
+  <nav data-module-nav class="c-page-head__navigation o-container">
+
     @if ($navigation)
-      <div class="c-header-navigation -desktop js-header-navigation">
+      <div class="c-header-navigation -desktop || js-header-navigation">
         @foreach ($navigation as $item)
           <div class="c-header-navigation__item">
             <a href="{{ $item->url }}" class="c-header-navigation__link @if ($item->children) has-children @endif {{ $item->classes ?? '' }} {{ $item->active ? 'is-active' : '' }}">
@@ -41,6 +42,11 @@
         @endforeach
       </div>
     @endif
+      <button data-nav="menu" class="c-page-head__burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
   </nav>
   <div class="c-page-head__divider"></div>
 </header>

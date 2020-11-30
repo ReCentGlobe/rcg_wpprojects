@@ -15,15 +15,31 @@
 }
 
 .is-style-rcg-people {
+  @include mq($until: tablet) {
+    display: flex;
+  }
   & tr {
     border-top: 2px solid var(--dark-color);
+
+    @include mq($until: tablet) {
+      display: flex;
+      flex-flow: column;
+    }
+
     & td {
       @include font-size(16px);
-      padding-top: $inuit-global-spacing-unit-small;
-      padding-bottom: calc(#{$inuit-global-spacing-unit-small} * 2);
+      padding-top: rem($inuit-global-spacing-unit-small);
+      padding-bottom: calc(#{rem($inuit-global-spacing-unit-small)} * 2);
+
+      @include mq($until: tablet) {
+        padding-bottom: rem($inuit-global-spacing-unit-small);
+      }
     }
     & td:first-of-type {
       margin-bottom: $inuit-global-spacing-unit-tiny;
+      @include mq($until: tablet) {
+        margin-bottom: 0;
+      }
     }
     & td:first-of-type strong {
       margin: $inuit-global-spacing-unit-tiny 0 $inuit-global-spacing-unit-tiny;
@@ -35,6 +51,10 @@
       color: var(--primary-color);
       margin-bottom: $inuit-global-spacing-unit-tiny;
       font-weight: 700;
+
+      @include mq($until: tablet) {
+        margin-bottom: 0;
+      }
     }
   }
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="ssh.web1.rz.intern.uni-leipzig.de" id="b381b538-352d-4f0b-a173-01dae471101d" port="22" nameFormat="DESCRIPTIVE" username="jmcoe" />
+    </configs>
+  </component>
+</project>

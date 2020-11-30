@@ -2,6 +2,13 @@
 <project version="4">
   <component name="PublishConfigData" serverName="Staging" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
+      <paths name="Live">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/jmcoe/webdir" local="$PROJECT_DIR$/web" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="Staging">
         <serverdata>
           <mappings>

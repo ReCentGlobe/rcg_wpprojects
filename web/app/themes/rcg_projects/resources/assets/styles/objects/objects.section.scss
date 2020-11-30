@@ -1,6 +1,14 @@
 .o-section {
+
+
   padding-bottom: $inuit-global-spacing-unit-huge;
   padding-top: $inuit-global-spacing-unit-large;
+
+  @include mq($until: tablet) {
+    padding-bottom: calc(#{$inuit-global-spacing-unit-huge} / 2);
+    padding-top: calc(#{$inuit-global-spacing-unit-large} / 2);
+  }
+
   &__header {
   }
   &__body {
@@ -18,5 +26,9 @@
       padding-top: 1rem;
     }
     margin-bottom: 1rem;
+
+    @include mq($until: tablet) {
+      line-height: 1.25;
+    }
   }
 }

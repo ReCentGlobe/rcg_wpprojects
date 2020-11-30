@@ -9,6 +9,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="b6cb3bb3-2cd7-42d2-a995-faeee50ef388" name="Live">
+        <fileTransfer accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="b381b538-352d-4f0b-a173-01dae471101d" sshConfig="jmcoe@ssh.web1.rz.intern.uni-leipzig.de:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

@@ -19,6 +19,10 @@ html {
   &.has-scroll-dragging {
     user-select: none;
   }
+
+  @include mq($until: tablet) {
+    font-size: 1em;
+  }
 }
 
 body {

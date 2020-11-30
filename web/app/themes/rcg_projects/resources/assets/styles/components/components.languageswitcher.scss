@@ -3,6 +3,7 @@
   margin-bottom: $inuit-global-spacing-unit-small;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 
   &__list {
     display: flex;
@@ -28,6 +29,13 @@
     text-transform: uppercase;
     letter-spacing: 1.125px;
     font-weight: 600;
+
+    @include mq($from: mobile) {
+      max-width: 65%;
+    }
+    @include mq($from: tablet) {
+      max-width: 100%;
+    }
   }
 
   @include mq($until: mobile) {

@@ -2,6 +2,8 @@ const mix = require("laravel-mix");
 require("@tinypixelco/laravel-mix-wp-blocks");
 require("laravel-mix-purgecss");
 require("laravel-mix-copy-watched");
+require("laravel-mix-modernizr");
+require("laravel-mix-polyfill");
 require("mix-tailwindcss");
 
 /*
@@ -19,29 +21,24 @@ mix.setPublicPath("./dist").browserSync("sage.test");
 
 mix
   .sass("resources/assets/styles/app.scss", "styles")
-  .sass("resources/assets/styles/editor.scss", "styles")
-  .tailwind("./tailwind.config.js")
-  .purgeCss({
-    whitelist: require("purgecss-with-wordpress").whitelist,
-    whitelistPatterns: require("purgecss-with-wordpress").whitelistPatterns,
-  });
+  .sass("resources/assets/styles/editor.scss", "styles");
 
 mix
   .js("resources/assets/scripts/app.js", "scripts")
   .js("resources/assets/scripts/customizer.js", "scripts")
+  .modernizr()
+  .polyfill({
+    enabled: false,
+    useBuiltIns: "usage",
+    targets: "> 0.25%, not dead",
+  })
   .blocks("resources/assets/scripts/editor.js", "scripts")
-  .extract([
-    "lozad",
-    "intersection-observer",
-    "animejs",
-    "headroom.js",
-    "@tinypixelco/hoverfx",
-    "gsap",
-  ]);
+  .extract(["lazysizes", "gsap", "swiper", "locomotive-scroll"]);
 
 mix
   .copyWatched("resources/assets/images/**", "dist/images")
-  .copyWatched("resources/assets/fonts/**", "dist/fonts");
+  .copyWatched("resources/assets/fonts/**", "dist/fonts")
+  .copyWatched("resources/assets/svg/**", "dist/svg");
 
 mix.autoload({
   jquery: ["$", "window.jQuery"],
