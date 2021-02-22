@@ -1,0 +1,55 @@
+.c-video {
+  //display: flex;
+  background: white;
+  border: 2px solid var(--primary-color);
+  color: inherit;
+  padding: 2rem;
+  align-items: center;
+  & .wp-block-embed {
+    margin: 0;
+  }
+  &__content {
+    order: 1;
+    //flex-basis: 50%;
+    & h5 {
+      font-size: 1.1rem;
+      line-height: 1.8181818182;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0;
+    }
+    & h6 {
+      font-size: 0.8rem;
+      line-height: 1.875;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      overflow: hidden;
+      display: inherit;
+      max-width: 100%;
+      margin-bottom: 0;
+      color: inherit;
+    }
+    & p {
+      font-size: 0.8rem;
+      line-height: 1.5;
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+  }
+  &__embed {
+    //flex-basis: 50%;
+    order: 2;
+  }
+
+  & + & {
+    margin-top: rem(40px);
+  }
+  &:nth-child(even) {
+    .c-video__content {
+      order: 2;
+    }
+    .c-video__embed {
+      order: 1;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.c-logo {
+  display: flex;
+  flex-flow: column;
+
+  &__subtitle {
+    margin-top: $inuit-global-spacing-unit-small;
+    font-size: rem(12px);
+    color: #1E1E1C;
+  }
+  &__media {
+    transform: translateX(-35px);
+  }
+}

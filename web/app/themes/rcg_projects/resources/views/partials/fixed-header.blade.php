@@ -37,6 +37,18 @@
             <a href="{{ $item->url }}" class="c-header-navigation__link @if ($item->children) has-children @endif {{ $item->classes ?? '' }} {{ $item->active ? 'is-active' : '' }}">
               {!! $item->label !!}
             </a>
+
+            @if ($item->children)
+              <ul class="my-child-menu">
+                @foreach ($item->children as $child)
+                  <li class="my-child-item {{ $item->classes ?? '' }} {{ $child->active ? 'active' : '' }}">
+                    <a href="{{ $child->url }}">
+                      {{ $child->label }}
+                    </a>
+                  </li>
+                @endforeach
+              </ul>
+            @endif
           </div>
         @endforeach
       </div>

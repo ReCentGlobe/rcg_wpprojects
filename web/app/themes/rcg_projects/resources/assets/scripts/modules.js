@@ -5,3 +5,4 @@ export { default as Header } from "./modules/Header";
 export { default as Events } from "./modules/Events";
 export { default as Slider } from "./modules/Slider";
 export { default as Nav } from "./modules/Nav";
+export { default as Maps } from "./modules/Maps";

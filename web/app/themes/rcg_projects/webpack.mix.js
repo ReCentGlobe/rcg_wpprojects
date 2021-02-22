@@ -5,6 +5,7 @@ require("laravel-mix-copy-watched");
 require("laravel-mix-modernizr");
 require("laravel-mix-polyfill");
 require("mix-tailwindcss");
+require("laravel-mix-bundle-analyzer");
 
 /*
  |--------------------------------------------------------------------------
@@ -18,6 +19,15 @@ require("mix-tailwindcss");
  */
 
 mix.setPublicPath("./dist").browserSync("sage.test");
+
+mix.webpackConfig({
+  externals: function (context, request, callback) {
+    if (/xlsx|canvg|pdfmake/.test(request)) {
+      return callback(null, "commonjs " + request);
+    }
+    callback();
+  },
+});
 
 mix
   .sass("resources/assets/styles/app.scss", "styles")
@@ -48,4 +58,7 @@ mix.options({
   processCssUrls: false,
 });
 
-mix.sourceMaps(false, "source-map").version();
+//mix.sourceMaps(false, "source-map").version();
+if (!mix.inProduction()) {
+  mix.bundleAnalyzer();
+}

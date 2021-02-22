@@ -53,6 +53,7 @@ class ThemeOptions extends Field
                     'width' => '25%',
                 ],
             ])
+            ->addTrueFalse('enable_logo')
             ->endGroup()
             /**
              * Newsletter Tab

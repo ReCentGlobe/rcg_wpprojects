@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Staging" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" serverName="UNESCO LIve" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="Live">
+      <paths name="100WH Live">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/webdir/app/themes/rcg_projects" local="$PROJECT_DIR$/web/app/themes/rcg_projects" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="JMCOE Live">
         <serverdata>
           <mappings>
             <mapping deploy="/home/jmcoe/webdir" local="$PROJECT_DIR$/web" web="/" />
@@ -13,6 +20,14 @@
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="UNESCO LIve">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/webdir/app/themes/rcg_projects" local="$PROJECT_DIR$/web/app/themes/rcg_projects" web="/" />
+            <mapping deploy="/webdir/app/mu-plugins" local="$PROJECT_DIR$/web/app/mu-plugins" />
           </mappings>
         </serverdata>
       </paths>

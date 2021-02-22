@@ -40,6 +40,35 @@ return [
                 'text_domain' => 'sage'
             ]
         ],
+        'video' => [
+            'public' => true,
+            'publicly_queryable' => true,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'query_var' => true,
+            'has_archive' => 'videos',
+            'show_in_rest' => true,
+            'show_in_graphql' => true,
+            'graphql_single_name' => 'video',
+            'graphql_plural_name' => 'video',
+            'menu_icon' => 'dashicons-format-video',
+            'hierarchical' => false,
+            'menu_position' => null,
+            'can_export' => true,
+            'capability_type' => 'post',
+            'supports' => array('title'),
+            'rewrite' => [
+                'slug' => 'videos',
+                'with_front' => false,
+                'feeds' => true,
+                'pages' => true
+            ],
+            'labels' => [
+                'singular' => 'Video',
+                'plural' => 'Videos',
+                'text_domain' => 'sage'
+            ]
+        ],
         'blog' => [
             'public' => true,
             'publicly_queryable' => true,

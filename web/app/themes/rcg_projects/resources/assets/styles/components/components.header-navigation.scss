@@ -40,7 +40,7 @@
     display: inline-block;
     color: inherit;
     letter-spacing: 0;
-    &:first-of-type > .c-header-navigation__link{
+    &:first-of-type > .c-header-navigation__link {
       padding-left: 0;
       @include mq($until: tablet) {
         padding-left: rem($inuit-global-spacing-unit-tiny);
@@ -49,6 +49,81 @@
   }
   &.-desktop &__link.is-active {
     border-bottom-color: var(--primary-color);
+  }
+
+  &.-desktop &__link.has-children {
+    & + .c-header-navigation__childlist{
+      visibility: hidden;
+      transition: 0.2s 1s;
+      opacity: 0;
+      //transition: 0.2s opacity ease-in-out;
+      //transition-delay: 1s;
+    }
+    @include u-hocus {
+      & + .c-header-navigation__childlist {
+        visibility: visible;
+        transition-delay: 0s;
+        opacity: 1;
+      }
+    }
+  }
+
+  &.-desktop &__childlist {
+    position: absolute;
+    display: flex;
+    top: 100%;
+    z-index: 1;
+    list-style: none;
+    margin: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    justify-content: flex-end;
+
+    &:before {
+      content: " ";
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      display: block;
+      height: 100%;
+      width: 200vw;
+      z-index: -1;
+      background: var(--primary-color);
+    }
+  }
+  &.-desktop &__childitem {
+    display: inline-block;
+    color: inherit;
+    letter-spacing: 0;
+    &:first-of-type > .c-header-navigation__child {
+      padding-left: 0;
+      @include mq($until: tablet) {
+        padding-left: rem($inuit-global-spacing-unit-tiny);
+      }
+    }
+
+  }
+  &.-desktop &__childlink {
+    position: relative;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    color: var(--dark-color);
+    @include font-size(16px, 1.25);
+    letter-spacing: 1.14px;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: rem($inuit-global-spacing-unit-tiny);
+
+    @include u-hocus {
+      color: #fff;
+      text-decoration: none;
+    }
   }
 
   &.-mobile {

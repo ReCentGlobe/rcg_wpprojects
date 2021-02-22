@@ -23,7 +23,7 @@ function get_events()
     } else {
         $dataPaged = get_query_var('paged') ?: 1;
     }
-    $today = date('Ymd', mktime(0, 0, 0, date('m'), date('d') + 30, date('Y')));
+    $today = date('Ymd', mktime(0, 0, 0, date('m'), date('d') + 14, date('Y')));
 
     $meta_query = array('relation' => 'AND');
     $meta_query[] = array(

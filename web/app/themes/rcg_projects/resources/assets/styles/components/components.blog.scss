@@ -43,9 +43,9 @@
     font-weight: 700;
     display: block;
     color: var(--dark-color);
-    white-space: nowrap;
+    //white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    //text-overflow: ellipsis;
     max-width: 100%;
     letter-spacing: 0.05em;
     margin-bottom: 0;
@@ -55,9 +55,9 @@
     color: #b6b6b6;
     text-transform: uppercase;
     letter-spacing: 0;
-    white-space: nowrap;
+    //white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    //text-overflow: ellipsis;
     display: inherit;
     max-width: 100%;
     margin-bottom: $inuit-global-spacing-unit-small;

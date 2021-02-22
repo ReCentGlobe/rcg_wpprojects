@@ -3,6 +3,12 @@
   <component name="SshConfigs">
     <configs>
       <sshConfig authType="PASSWORD" host="ssh.web1.rz.intern.uni-leipzig.de" id="b381b538-352d-4f0b-a173-01dae471101d" port="22" nameFormat="DESCRIPTIVE" username="jmcoe" />
+      <sshConfig authType="PASSWORD" host="ssh.web1.rz.intern.uni-leipzig.de" id="6752bcf7-2a48-40b9-b47c-293c95b651c6" port="22" customName="100wh@ssh.web1.rz.intern.uni-leipzig.de:22" nameFormat="CUSTOM" username="100worldhistories">
+        <option name="customName" value="100wh@ssh.web1.rz.intern.uni-leipzig.de:22" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" host="ssh.web1.rz.intern.uni-leipzig.de" id="959cd82e-7567-4308-8c93-520ff83ef0bc" port="22" customName="UNESCO LIve" nameFormat="CUSTOM" username="globalhistoryofhumankind">
+        <option name="customName" value="UNESCO LIve" />
+      </sshConfig>
     </configs>
   </component>
 </project>

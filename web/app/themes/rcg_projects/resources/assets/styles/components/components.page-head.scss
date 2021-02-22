@@ -19,6 +19,10 @@
   }
   &__divider {
     border-top: 1px dotted #e2e1dd;
+    &.--full {
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
   }
   &.is-fixed &__divider {
     border-top: 1px dotted var(--dark-color);

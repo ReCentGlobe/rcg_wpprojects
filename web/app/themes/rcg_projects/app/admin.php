@@ -76,11 +76,12 @@ add_filter(
         remove_menu_page('wp_stream');
         remove_menu_page('wp-graphiql/wp-graphiql.php');
         remove_menu_page('themes.php');
+        remove_menu_page('theseoframework-settings');
         remove_submenu_page('options-general.php', 'options-media.php');
         remove_submenu_page('options-general.php', 'options-privacy.php');
         remove_submenu_page('options-general.php', 'options-writing.php');
         //remove_submenu_page('options-general.php', 'options-reading.php');
-        remove_submenu_page('options-general.php', 'options-permalink.php');
+        //remove_submenu_page('options-general.php', 'options-permalink.php');
         remove_submenu_page('options-general.php', 'disable_comments_settings');
         remove_submenu_page('options-general.php', 'duplicatepost');
         remove_submenu_page('options-general.php', 'options-discussion.php');
@@ -96,4 +97,4 @@ add_filter(
     999
 );
 
-//add_filter('acf/settings/show_admin', '__return_false');
+add_filter('acf/settings/show_admin', '__return_false');

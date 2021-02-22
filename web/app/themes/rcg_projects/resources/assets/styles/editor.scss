@@ -27,9 +27,13 @@
 @import "tools/tools.mixins";
 @import "tools/tools.functions";
 
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
+//@import "~bootstrap/scss/functions";
+//@import "~bootstrap/scss/variables";
+//@import "~bootstrap/scss/mixins";
+
+.wp-block {
+  max-width: rem(1140px);
+}
 
 .editor-styles-wrapper > * {
   font-family: $global-font-family;
@@ -142,6 +146,150 @@
   @include mq($until: tablet) {
     & .wp-block-media-text__content {
       padding: 2rem;
+    }
+  }
+}
+
+.rcg-columns-secondary {
+  background: var(--secondary-color);
+  color: white;
+  padding: 2rem;
+  align-items: center;
+  & .wp-block-embed {
+    margin: 0;
+  }
+  & .wp-block-group {
+    & h5 {
+      font-size: 1.1rem;
+      line-height: 1.8181818182;
+      font-weight: 700;
+      display: block;
+      margin: 0;
+    }
+    & h6 {
+      font-size: 0.8rem;
+      line-height: 1.875;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      overflow: hidden;
+      display: inherit;
+      max-width: 100%;
+      margin-bottom: 20px;
+      color: white;
+    }
+    & p {
+      font-size: 0.8rem;
+      line-height: 1.5;
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.rcg-columns-primary {
+  background: var(--primary-color);
+  color: white;
+  padding: 2rem;
+  align-items: center;
+  & .wp-block-embed {
+    margin: 0;
+  }
+  & .wp-block-group {
+    & h5 {
+      font-size: 1.1rem;
+      line-height: 1.8181818182;
+      font-weight: 700;
+      display: block;
+      margin: 0;
+    }
+    & h6 {
+      font-size: 0.8rem;
+      line-height: 1.875;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      overflow: hidden;
+      display: inherit;
+      max-width: 100%;
+      margin-bottom: 20px;
+      color: white;
+    }
+    & p {
+      font-size: 0.8rem;
+      line-height: 1.5;
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+  }
+}
+.rcg-columns-secondary {
+  background: var(--secondary-color);
+  color: white;
+  padding: 2rem;
+  align-items: center;
+  & .wp-block-embed {
+    margin: 0;
+  }
+  & .wp-block-group {
+    & h5 {
+      font-size: 1.1rem;
+      line-height: 1.8181818182;
+      font-weight: 700;
+      display: block;
+      margin: 0;
+    }
+    & h6 {
+      font-size: 0.8rem;
+      line-height: 1.875;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      overflow: hidden;
+      display: inherit;
+      max-width: 100%;
+      margin-bottom: 20px;
+      color: white;
+    }
+    & p {
+      font-size: 0.8rem;
+      line-height: 1.5;
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.rcg-columns-outline {
+  background: white;
+  border: 2px solid var(--primary-color);
+  color: inherit;
+  padding: 2rem;
+  align-items: center;
+  & .wp-block-embed {
+    margin: 0;
+  }
+  & .wp-block-group {
+    & h5 {
+      font-size: 1.1rem;
+      line-height: 1.8181818182;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0;
+    }
+    & h6 {
+      font-size: 0.8rem;
+      line-height: 1.875;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      overflow: hidden;
+      display: inherit;
+      max-width: 100%;
+      margin-bottom: 0;
+      color: inherit;
+    }
+    & p {
+      font-size: 0.8rem;
+      line-height: 1.5;
+      margin-top: 1rem;
+      margin-bottom: 0;
     }
   }
 }

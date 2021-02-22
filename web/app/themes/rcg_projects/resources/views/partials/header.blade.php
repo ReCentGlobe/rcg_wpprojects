@@ -1,6 +1,15 @@
 
-<header class="c-page-head" data-scroll-section data-scroll data-scroll-speed=".2" data-scroll-delay="1">
+<header class="c-page-head" data-scroll-section>
   <div class="c-page-head__meta o-container">
+    <div class="c-logo">
+      <a href="/" class="c-logo__link">
+        <svg id="ulLogo" class="c-logo__media">
+          <use href="@asset('svg/svgMap.svg#ulLogo')"/>
+        </svg>
+      </a>
+      <div class="c-page-head__divider --full"></div>
+      <a class="c-logo__subtitle" href="">Research Centre Global Dynamics</a>
+    </div>
     <div class="c-languageswitcher js-languageswitcher">
       <div class="c-languageswitcher__homelink">
         <a href="{{ home_url('/') }}" class="">{{ $siteName }}</a>
@@ -38,6 +47,17 @@
             <a href="{{ $item->url }}" class="c-header-navigation__link @if ($item->children) has-children @endif {{ $item->classes ?? '' }} {{ $item->active ? 'is-active' : '' }}">
               {!! $item->label !!}
             </a>
+            @if ($item->children)
+              <ul class="c-header-navigation__childlist">
+                @foreach ($item->children as $child)
+                  <li class="c-header-navigation__childitem {{ $item->classes ?? '' }} {{ $child->active ? 'active' : '' }}">
+                    <a class="c-header-navigation__childlink" href="{{ $child->url }}">
+                      {{ $child->label }}
+                    </a>
+                  </li>
+                @endforeach
+              </ul>
+            @endif
           </div>
         @endforeach
       </div>

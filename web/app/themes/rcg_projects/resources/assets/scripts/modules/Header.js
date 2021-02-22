@@ -31,7 +31,7 @@ export default class extends module {
       })
       .from(languageNavigation, { duration: 0.2, translateY: -10, opacity: 0 })
       .from(headerLogo, { duration: 0.2, translateY: -10, opacity: 0 }, ">")
-      .from(mainNavigation, { duration: 0.5, translateY: -10, opacity: 0 }, "<")
+      //.from(mainNavigation, { duration: 0.5, translateY: -10, opacity: 0 }, "<")
       .from(
         contentSection,
         { duration: 0.5, translateY: -10, opacity: 0 },

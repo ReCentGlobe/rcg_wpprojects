@@ -9,8 +9,22 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
-      <webServer id="b6cb3bb3-2cd7-42d2-a995-faeee50ef388" name="Live">
+      <webServer id="b6cb3bb3-2cd7-42d2-a995-faeee50ef388" name="JMCOE Live">
         <fileTransfer accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="b381b538-352d-4f0b-a173-01dae471101d" sshConfig="jmcoe@ssh.web1.rz.intern.uni-leipzig.de:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="d11c8367-f122-4ee9-83ac-2455c04ab1b5" name="100WH Live">
+        <fileTransfer rootFolder="/home/100worldhistories" accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="6752bcf7-2a48-40b9-b47c-293c95b651c6" sshConfig="100wh@ssh.web1.rz.intern.uni-leipzig.de:22">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="dd56a497-3c37-403d-a922-affb26c61ead" name="UNESCO LIve">
+        <fileTransfer rootFolder="/home/globalhistoryofhumankind" accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="959cd82e-7567-4308-8c93-520ff83ef0bc" sshConfig="UNESCO LIve">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
