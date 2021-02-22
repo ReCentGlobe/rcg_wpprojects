@@ -1,12 +1,15 @@
-default:
-  image: php:7.3
+stages:
+  - build
+  - test
 
-build-job:
+build:
   stage: build
+  image: php:7.3
   script:
     - echo "Hello, $GITLAB_USER_LOGIN!"
+    - composer install
 
-test-job1:
+test:
   stage: test
   script:
     - echo "This job tests something"
