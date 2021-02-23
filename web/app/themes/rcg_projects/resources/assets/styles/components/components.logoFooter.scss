@@ -1,0 +1,15 @@
+.c-logoFooter {
+  &_inner {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(10px,1fr));
+    grid-gap: 1rem;
+    align-items: center;
+  }
+
+  &_link {
+
+  }
+  &_media {
+
+  }
+}

@@ -1,5 +1,6 @@
 import { module } from "modujs";
 import { gsap } from "gsap";
+import { debugLoad } from "../utils/env";
 
 export default class extends module {
   constructor(m) {
@@ -38,7 +39,7 @@ export default class extends module {
         "<"
       );
 
-    console.log("LOADED--HeaderAnimation");
+    debugLoad("LOADED--HeaderAnimation");
   }
 
   toggleSound(e) {

@@ -2,6 +2,7 @@ import svg4everybody from "svg4everybody";
 import lazySizes from "lazysizes";
 import "lazysizes/plugins/parent-fit/ls.parent-fit";
 import "lazysizes/plugins/blur-up/ls.blur-up";
+import { debugLoad } from "./utils/env";
 
 /**
  * LazySizes
@@ -17,7 +18,7 @@ export default function () {
    * SVG4Everybody
    */
   svg4everybody();
-  console.log("LOADED--SVG4Everybody");
+  debugLoad("LOADED--SVG4Everybody");
 
   /**
    * WebfontLoader
@@ -32,5 +33,5 @@ export default function () {
   /**
    * LazySizes
    */
-  console.log("LOADED--LazySizes");
+  debugLoad("LOADED--LazySizes");
 }

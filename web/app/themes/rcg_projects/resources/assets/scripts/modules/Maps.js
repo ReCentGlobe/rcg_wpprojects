@@ -7,7 +7,7 @@ import * as markerimage_disabled from "../../svg/projektpunkt_inaktiv.svg";
 import tippy from "tippy.js";
 import { hideAll } from "tippy.js";
 import axios from "redaxios";
-import { html } from "../utils/env";
+import { debugLoad, html } from "../utils/env";
 import Swiper from "swiper";
 
 export default class extends module {
@@ -16,7 +16,7 @@ export default class extends module {
   }
 
   init() {
-    console.log("LOADED--AMCharts");
+    debugLoad("LOADED--AMCharts");
     /**
      * Initialize Maps
      */

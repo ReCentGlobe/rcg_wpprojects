@@ -1,5 +1,6 @@
 import { module } from "modujs";
 import modularLoad from "modularload";
+import { debugLoad } from "../utils/env";
 
 export default class extends module {
   constructor(m) {
@@ -74,6 +75,6 @@ export default class extends module {
       });
     });
 
-    console.log("LOADED--ModularLoad");
+    debugLoad("LOADED--ModularLoad");
   }
 }

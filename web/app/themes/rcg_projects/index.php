@@ -1,5 +1,5 @@
 <!doctype html>
-<html <?php language_attributes(); ?> style="--primary-color: <?= get_global_option('theme_primary_color','option') ?>; --secondary-color: <?= get_global_option('theme_secondary_color','option') ?>; --dark-color: <?= get_global_option('theme_dark_color','option') ?>; --light-color: <?= get_global_option('theme_light_color','option') ?>">
+<html <?php language_attributes(); ?> style="--primary-color: <?= get_global_option('theme_primary_color','option') ?>; --secondary-color: <?= get_global_option('theme_secondary_color','option') ?>; --dark-color: <?= get_global_option('theme_dark_color','option') ?>; --light-color: <?= get_global_option('theme_light_color','option') ?>" data-debug="true">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">

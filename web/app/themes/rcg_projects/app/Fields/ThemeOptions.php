@@ -33,22 +33,22 @@ class ThemeOptions extends Field
              */
             ->addTab('Theme')
             ->addGroup('theme')
-            ->addColorPicker('primary_color',[
+            ->addColorPicker('primary_color', [
                 'wrapper' => [
                     'width' => '25%',
                 ],
             ])
-            ->addColorPicker('secondary_color',[
+            ->addColorPicker('secondary_color', [
                 'wrapper' => [
                     'width' => '25%',
                 ],
             ])
-            ->addColorPicker('dark_color',[
+            ->addColorPicker('dark_color', [
                 'wrapper' => [
                     'width' => '25%',
                 ],
             ])
-            ->addColorPicker('light_color',[
+            ->addColorPicker('light_color', [
                 'wrapper' => [
                     'width' => '25%',
                 ],

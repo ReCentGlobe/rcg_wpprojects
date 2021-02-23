@@ -1,4 +1,5 @@
 import { module } from "modujs";
+import { debugLoad } from "../utils/env";
 
 export default class extends module {
   constructor(m) {
@@ -10,10 +11,11 @@ export default class extends module {
     };
   }
 
-  init() {}
+  init() {
+    debugLoad("LOADED--Nav");
+  }
 
   toggleMenu(e) {
-    console.log("yeah");
     e.currentTarget.classList.toggle("is-active");
     this.el
       .querySelector(".js-header-navigation")

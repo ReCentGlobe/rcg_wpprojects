@@ -2,6 +2,7 @@ import { module } from "modujs";
 import Datepicker from "vuejs-datepicker";
 import Vue from "vue";
 import { format, toDate } from "date-fns";
+import { debugLoad } from "../utils/env";
 
 export default class extends module {
   constructor(m) {
@@ -148,6 +149,6 @@ export default class extends module {
       scrollUpdate();
     });
 
-    console.log("LOADED--Events");
+    debugLoad("LOADED--Events");
   }
 }

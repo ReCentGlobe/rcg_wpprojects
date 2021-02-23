@@ -4,7 +4,7 @@
 import "jquery";
 import modular from "modujs";
 import * as modules from "./modules";
-import { html } from "./utils/env";
+import { debugLoad, html } from "./utils/env";
 import globals from "./globals";
 import { set100vhVar } from "./utils/index";
 import tools from "./utils/tools";
@@ -18,7 +18,7 @@ const app = new modular({
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("LOADED--DOM Content");
+  debugLoad("LOADED--DOM Content");
 });
 window.onload = (event) => {
   /*  const $style = document.getElementById('stylesheet');

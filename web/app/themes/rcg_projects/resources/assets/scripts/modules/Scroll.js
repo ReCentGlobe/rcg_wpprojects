@@ -1,6 +1,6 @@
 import { module } from "modujs";
 import LocomotiveScroll from "locomotive-scroll";
-import { html } from "../utils/env";
+import { debugLoad, html } from "../utils/env";
 
 export default class extends module {
   constructor(m) {
@@ -36,7 +36,7 @@ export default class extends module {
         html.classList.add("is-scroll-up");
       }
     });
-    console.log("LOADED--SmoothScroll");
+    debugLoad("LOADED--SmoothScroll");
   }
 
   toggleLazy(args) {
