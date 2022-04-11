@@ -26,6 +26,7 @@ export default class extends module {
     let container = am4core.create("projectmap", am4core.Container);
     container.width = am4core.percent(100);
     container.height = am4core.percent(100);
+    container.wheelable = false;
 
     /**
      * Create a chart instance
@@ -37,8 +38,9 @@ export default class extends module {
     chart.geodata = am4geodata_worldLow;
     chart.projection = new am4maps.projections.Eckert6();
     chart.homeZoomLevel = 1;
+    chart.maxZoomLevel = 1;
     chart.homeGeoPoint = {
-      latitude: -15,
+      latitude: 22,
       longitude: 11,
     };
 

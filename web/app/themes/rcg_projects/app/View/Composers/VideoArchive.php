@@ -67,7 +67,7 @@ class VideoArchive extends Composer
 
     public function queryVideos(): \WP_Query
     {
-        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+        $paged = get_query_var('paged') ? get_query_var('paged') : 0;
         return new \WP_Query(array(
             'post_type' => 'video',
             'orderby' => 'publish_date',

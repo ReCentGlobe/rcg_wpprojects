@@ -23,7 +23,7 @@ function get_events()
     } else {
         $dataPaged = get_query_var('paged') ?: 1;
     }
-    $today = date('Ymd', mktime(0, 0, 0, date('m'), date('d') + 14, date('Y')));
+    $today = date('Ymd', mktime(0, 0, 0, date('m') + 2, date('d') + 14, date('Y')));
 
     $meta_query = array('relation' => 'AND');
     $meta_query[] = array(
@@ -64,7 +64,7 @@ function get_events()
         's' => $search_value,
         'tax_query' => $tax_query,
         'status' => 'publish',
-        'orderby' => 'meta_value_num',
+        'orderby' => 'meta_value',
         'meta_key' => 'event_startdate',
         'meta_query' => $meta_query,
         'paged' => $dataPaged,

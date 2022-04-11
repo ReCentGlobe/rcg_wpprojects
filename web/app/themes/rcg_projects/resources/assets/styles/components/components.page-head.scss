@@ -1,4 +1,11 @@
 .c-page-head {
+  $self: &;
+  background: var(--white);
+  transform: translateZ(0);
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  z-index: 100;
+
   &__meta {
   }
   &__navigation {
@@ -10,12 +17,16 @@
     }
   }
 
+  @at-root [data-direction='down'] & {
+    transform: translate3d(0, -100%, 0);
+  }
   &.is-fixed {
-    position: fixed;
+
+/*    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 3;
+    z-index: 3;*/
   }
   &__divider {
     border-top: 1px dotted #e2e1dd;
@@ -24,9 +35,9 @@
       margin-right: calc(50% - 50vw);
     }
   }
-  &.is-fixed &__divider {
+/*  &.is-fixed &__divider {
     border-top: 1px dotted var(--dark-color);
-  }
+  }*/
   &__burger {
     margin-top: rem($inuit-global-spacing-unit-small);
     margin-bottom: rem($inuit-global-spacing-unit-small);

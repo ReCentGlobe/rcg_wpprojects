@@ -1,17 +1,23 @@
-
+@if( have_rows('theme_logowrapper', 'options') )
 <div class="c-logoFooter" data-scroll-section >
   <div class="o-container">
     <div class="c-logoFooter_inner">
-      @for ($i = 1; $i <= 4; $i++)
-      <a href="/" class="c-logoFooter_link">
-        <svg class="c-logoFooter_media">
-          <use href="@asset('svg/svgMap.svg#ulLogo')"/>
-        </svg>
-      </a>
-      @endfor
+      @php
+        $logos = get_field('theme_logowrapper','options')
+      @endphp
+
+      @while(have_rows('theme_logowrapper', 'options'))
+        @php
+          the_row()
+        @endphp
+        <a href="@sub('link','url')" target="_blank" class="c-logoFooter_link">
+          <img class="c-logoFooter_media" src="@sub('logo','url')" alt="@sub('logo','alt')">
+        </a>
+      @endwhile
     </div>
   </div>
 </div>
+@endif
 <footer data-scroll-section class="c-footer">
   <div class="o-section">
     <div class="o-section__content o-container">

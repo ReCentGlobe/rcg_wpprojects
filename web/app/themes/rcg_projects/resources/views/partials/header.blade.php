@@ -1,14 +1,14 @@
 
-<header class="c-page-head" data-scroll-section>
+<header class="c-page-head || js-page-head" >
   <div class="c-page-head__meta o-container">
     <div class="c-logo">
-      <a href="/" class="c-logo__link">
+      <a href="/" class="c-logo__link" {{ $ulLogo ? 'hidden' : '' }}>
         <svg id="ulLogo" class="c-logo__media">
           <use href="@asset('svg/svgMap.svg#ulLogo')"/>
         </svg>
       </a>
       <div class="c-page-head__divider --full"></div>
-      <a class="c-logo__subtitle" href="">Research Centre Global Dynamics</a>
+      <a class="c-logo__subtitle" href="">Leipzig Research Centre Global Dynamics | ReCentGlobe</a>
     </div>
     <div class="c-languageswitcher js-languageswitcher">
       <div class="c-languageswitcher__homelink">
@@ -52,7 +52,7 @@
                 @foreach ($item->children as $child)
                   <li class="c-header-navigation__childitem {{ $item->classes ?? '' }} {{ $child->active ? 'active' : '' }}">
                     <a class="c-header-navigation__childlink" href="{{ $child->url }}">
-                      {{ $child->label }}
+                      {!! $child->label !!}
                     </a>
                   </li>
                 @endforeach

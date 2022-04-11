@@ -30,6 +30,27 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="1013c9a0-5fdf-4803-a403-e3a3458a79e4" name="IVAC Live">
+        <fileTransfer rootFolder="/home/ivac" accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="d6f03fc4-8cad-4c3b-adc0-f990036ae0a6" sshConfig="IVAC Live">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="652331ce-e697-478c-b0f4-9a4558a20b16" name="IPDigital Live">
+        <fileTransfer rootFolder="/home/ipdigital" accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="4405dfa3-4805-4451-afb3-7cde6d87324d" sshConfig="IPDigital Live">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="5891bcb0-50cf-4761-b551-6d7085faaf1a" name="HandbookGlobal">
+        <fileTransfer rootFolder="/home/handbookglobalhistory" accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="96611d60-d4db-4d36-b4e4-91bb4554cdde" sshConfig="Handbook">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

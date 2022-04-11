@@ -2,12 +2,21 @@
 <project version="4">
   <component name="SshConfigs">
     <configs>
-      <sshConfig authType="PASSWORD" host="ssh.web1.rz.intern.uni-leipzig.de" id="b381b538-352d-4f0b-a173-01dae471101d" port="22" nameFormat="DESCRIPTIVE" username="jmcoe" />
-      <sshConfig authType="PASSWORD" host="ssh.web1.rz.intern.uni-leipzig.de" id="6752bcf7-2a48-40b9-b47c-293c95b651c6" port="22" customName="100wh@ssh.web1.rz.intern.uni-leipzig.de:22" nameFormat="CUSTOM" username="100worldhistories">
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="ssh.web1.rz.intern.uni-leipzig.de" id="b381b538-352d-4f0b-a173-01dae471101d" port="22" nameFormat="DESCRIPTIVE" username="jmcoe" />
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="ssh.web1.rz.intern.uni-leipzig.de" id="6752bcf7-2a48-40b9-b47c-293c95b651c6" port="22" customName="100wh@ssh.web1.rz.intern.uni-leipzig.de:22" nameFormat="CUSTOM" username="100worldhistories">
         <option name="customName" value="100wh@ssh.web1.rz.intern.uni-leipzig.de:22" />
       </sshConfig>
-      <sshConfig authType="PASSWORD" host="ssh.web1.rz.intern.uni-leipzig.de" id="959cd82e-7567-4308-8c93-520ff83ef0bc" port="22" customName="UNESCO LIve" nameFormat="CUSTOM" username="globalhistoryofhumankind">
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="ssh.web1.rz.intern.uni-leipzig.de" id="959cd82e-7567-4308-8c93-520ff83ef0bc" port="22" customName="UNESCO LIve" nameFormat="CUSTOM" username="globalhistoryofhumankind">
         <option name="customName" value="UNESCO LIve" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="ssh.web1.rz.intern.uni-leipzig.de" id="4405dfa3-4805-4451-afb3-7cde6d87324d" port="22" customName="IPDigital Live" nameFormat="CUSTOM" username="ipdigital">
+        <option name="customName" value="IPDigital Live" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="ssh.web1.rz.intern.uni-leipzig.de" id="d6f03fc4-8cad-4c3b-adc0-f990036ae0a6" port="22" customName="IVAC Live" nameFormat="CUSTOM" username="ivac">
+        <option name="customName" value="IVAC Live" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="ssh.web1.rz.intern.uni-leipzig.de" id="96611d60-d4db-4d36-b4e4-91bb4554cdde" port="22" customName="Handbook" nameFormat="CUSTOM" username="handbookglobalhistory">
+        <option name="customName" value="Handbook" />
       </sshConfig>
     </configs>
   </component>

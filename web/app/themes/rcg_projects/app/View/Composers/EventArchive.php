@@ -120,19 +120,23 @@ class EventArchive extends Composer
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
         $today = date(
             'Ymd',
-            mktime(0, 0, 0, date('m'), date('d') + 14, date('Y'))
+            mktime(0, 0, 0, date('m') + 2, date('d') + 14, date('Y'))
         );
+
+        $meta_query = array('relation' => 'AND');
+        $meta_query[] = array(
+            'key' => 'event_startdate',
+            'value' => $today,
+            'type' => 'DATETIME',
+            'compare' => '<'
+        );
+
         return new \WP_Query(array(
             'post_type' => 'event',
+            'status' => 'publish',
             'orderby' => 'meta_value',
-            'meta_query' => array(
-                array(
-                    'key' => 'event_startdate',
-                    'value' => $today,
-                    'type' => 'DATETIME',
-                    'compare' => '<'
-                )
-            ),
+            'meta_key' => 'event_startdate',
+            'meta_query' => $meta_query,
             'order' => 'DESC',
             'paged' => $paged
         ));

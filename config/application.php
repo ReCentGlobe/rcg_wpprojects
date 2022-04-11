@@ -10,6 +10,9 @@
 
 use Roots\WPConfig\Config;
 
+Sentry\init(['dsn' => 'https://e42a803d432f488ca11c6487ed2731d8@o297648.ingest.sentry.io/1550211' ]);
+Sentry\captureLastError();
+
 /**
  * Directory containing all of the site's files
  *
@@ -22,7 +25,7 @@ $root_dir = dirname(__DIR__);
  *
  * @var string
  */
-$webroot_dir = $root_dir . '/web';
+$webroot_dir = $root_dir . '/webdir';
 
 /**
  * Expose global env() function from oscarotero/env

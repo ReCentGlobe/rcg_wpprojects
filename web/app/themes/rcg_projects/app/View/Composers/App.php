@@ -24,6 +24,7 @@ class App extends Composer
     {
         return [
             'siteName' => $this->siteName(),
+            'ulLogo' => $this->ulLogo()
         ];
     }
 
@@ -35,5 +36,10 @@ class App extends Composer
     public function siteName()
     {
         return get_bloginfo('name', 'display');
+    }
+
+    public function ulLogo()
+    {
+        return get_field('theme_enable_logo', 'option');
     }
 }

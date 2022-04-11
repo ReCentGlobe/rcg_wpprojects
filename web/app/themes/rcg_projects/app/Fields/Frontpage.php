@@ -32,20 +32,6 @@ class Frontpage extends Field
                 ->addFile('webm')
                 ->addFile('poster')
             ->endGroup()
-            ->addRepeater('logowrapper', [
-                'layout' => 'row',
-                'button_label' => 'Add Logo',
-                'collapsed' => 'link'
-            ])
-                ->addImage('logo', [
-                    'wrapper' => [
-                        'width' => '20%',
-                    ]])
-                ->addLink('link', [
-                    'wrapper' => [
-                        'width' => '20%',
-                    ]])
-            ->endRepeater()
             ->endGroup();
 
         return $frontpage->build();

@@ -9,7 +9,8 @@
     margin: 0;
   }
   &__content {
-    order: 1;
+    margin-top: 1.5rem;
+    //order: 1;
     //flex-basis: 50%;
     & h5 {
       font-size: 1.1rem;
@@ -20,7 +21,8 @@
     }
     & h6 {
       font-size: 0.8rem;
-      line-height: 1.875;
+      line-height: 1.4;
+      opacity: 0.3;
       text-transform: uppercase;
       letter-spacing: 0;
       overflow: hidden;
@@ -38,18 +40,28 @@
   }
   &__embed {
     //flex-basis: 50%;
-    order: 2;
+    //order: 2;
   }
 
   & + & {
-    margin-top: rem(40px);
+    //margin-top: rem(40px);
   }
-  &:nth-child(even) {
+/*  &:nth-child(even) {
     .c-video__content {
       order: 2;
     }
     .c-video__embed {
       order: 1;
     }
+  }*/
+}
+
+.c-videoarchive {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+
+  @include mq($until: tablet) {
+    grid-template-columns: 1fr;
   }
 }

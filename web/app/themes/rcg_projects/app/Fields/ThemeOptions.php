@@ -53,7 +53,24 @@ class ThemeOptions extends Field
                     'width' => '25%',
                 ],
             ])
-            ->addTrueFalse('enable_logo')
+            ->addTrueFalse('enable_logo', [
+                'label' => 'Enable UL Logo in Header'
+            ])
+            ->addRepeater('logowrapper', [
+                'label' => 'Add Logos to Footer',
+                'layout' => 'row',
+                'button_label' => 'Add Logo',
+                'collapsed' => 'link'
+            ])
+                ->addImage('logo', [
+                    'wrapper' => [
+                        'width' => '20%',
+                    ]])
+                ->addLink('link', [
+                    'wrapper' => [
+                        'width' => '20%',
+                    ]])
+            ->endRepeater()
             ->endGroup()
             /**
              * Newsletter Tab

@@ -1,6 +1,6 @@
 .c-footer {
   & > .o-section {
-    padding: $inuit-global-spacing-unit-huge 0 0;
+    padding: 0;
 
     @include mq($until: tablet) {
       padding: 0;

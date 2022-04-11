@@ -10,8 +10,31 @@ export default class extends module {
   init() {
     this.scroll = new LocomotiveScroll({
       el: this.el,
-      smooth: true,
+      smooth: false,
       getDirection: true,
+      getSpeed: true,
+    });
+
+    const header = document.querySelector(".js-page-head");
+    let prevState = header.classList.contains("is-fixed");
+    const mutationObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === "class") {
+          const currentState = mutation.target.classList.contains("is-fixed");
+          if (prevState !== currentState) {
+            prevState = currentState;
+            this.update();
+            console.log(
+              `'is-fixed' class ${currentState ? "added" : "removed"}`
+            );
+          }
+        }
+      });
+    });
+    mutationObserver.observe(header, {
+      attributes: true,
+      attributeOldValue: true,
+      attributeFilter: ["class"],
     });
 
     this.scroll.on("call", (func, way, obj, id) => {
@@ -20,20 +43,15 @@ export default class extends module {
     });
 
     this.scroll.on("scroll", (args) => {
-      window.app.scroll.state = args;
-      console.log(args.direction);
-      if (args.scroll.y <= 60) {
-        html.classList.remove("is-not-top");
-        html.classList.add("is-top");
+      //window.app.scroll.state = args;
+      if (args.scroll.y < 100) {
+        //html.style.setProperty('--sig-header-height', 'var(--sig-header-large)');
+        document.querySelector(".js-page-head").classList.remove("is-fixed");
       }
-      if (args.scroll.y > 60 && args.direction === "down") {
-        html.classList.remove("is-top");
-        html.classList.add("is-not-top");
-        html.classList.remove("is-scroll-up");
-      } else if (args.scroll.y > 60 && args.direction === "up") {
-        html.classList.remove("is-top");
-        html.classList.add("is-not-top");
-        html.classList.add("is-scroll-up");
+      if (args.scroll.y > 100) {
+        //html.style.setProperty('--sig-header-height', 'var(--sig-header-small)');
+        document.querySelector(".js-page-head").classList.add("is-fixed");
+        document.documentElement.setAttribute("data-direction", args.direction);
       }
     });
     debugLoad("LOADED--SmoothScroll");

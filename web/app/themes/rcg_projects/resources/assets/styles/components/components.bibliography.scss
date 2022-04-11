@@ -1,0 +1,17 @@
+.c-bibliography,
+.zp-Zotpress {
+  & .zp-Entry {
+    @extend .c-event-tile;
+    &:hover & .csl-entry {
+      border-color: transparent;
+    }
+    & .csl-bib-body {
+      line-height: inherit!important;
+      padding-left: 0!important;
+      text-indent: 0!important;
+    }
+    & .csl-entry {
+      @extend .c-event-tile__content;
+    }
+  }
+}
