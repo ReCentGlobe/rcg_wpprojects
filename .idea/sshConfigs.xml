@@ -18,6 +18,19 @@
       <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="ssh.web1.rz.intern.uni-leipzig.de" id="96611d60-d4db-4d36-b4e4-91bb4554cdde" port="22" customName="Handbook" nameFormat="CUSTOM" username="handbookglobalhistory">
         <option name="customName" value="Handbook" />
       </sshConfig>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="ssh.web1.rz.intern.uni-leipzig.de" id="17f71c18-3493-48c4-ad46-e22a0bc37437" port="22" customName="europeasaglobalactor@ssh.web1.rz.intern.uni-leipzig.de:22" nameFormat="CUSTOM" username="europeasaglobalactor" useOpenSSHConfig="true">
+        <option name="customName" value="europeasaglobalactor@ssh.web1.rz.intern.uni-leipzig.de:22" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="ssh.web1.rz.intern.uni-leipzig.de" id="ead9c777-9d7b-4524-bdec-6d5c8d4b9b88" port="22" customName="globalhistoryHuman" nameFormat="CUSTOM" username="globalhistoryofhumankind" useOpenSSHConfig="true">
+        <option name="customName" value="globalhistoryHuman" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="ssh.web1.rz.intern.uni-leipzig.de" id="0432429c-a788-4eba-bc08-84a58d2a691a" port="22" customName="ESSHC" nameFormat="CUSTOM" username="esshc" useOpenSSHConfig="true">
+        <option name="customName" value="ESSHC" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="ssh.web1.rz.intern.uni-leipzig.de" id="45ec7d05-6223-4a0f-ad49-674a0c3a55ea" port="22" customName="ICHS" nameFormat="CUSTOM" username="ichs2026" useOpenSSHConfig="true">
+        <option name="customName" value="ICHS" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" host="ssh.web1.rz.intern.uni-leipzig.de" id="daae1afb-fe15-470f-85d7-7ae569944a24" port="22" nameFormat="DESCRIPTIVE" username="crossarea" useOpenSSHConfig="true" />
     </configs>
   </component>
 </project>

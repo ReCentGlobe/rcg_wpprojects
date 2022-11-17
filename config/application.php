@@ -9,9 +9,7 @@
  */
 
 use Roots\WPConfig\Config;
-
-Sentry\init(['dsn' => 'https://e42a803d432f488ca11c6487ed2731d8@o297648.ingest.sentry.io/1550211' ]);
-Sentry\captureLastError();
+use function Env\env;
 
 /**
  * Directory containing all of the site's files
@@ -28,20 +26,23 @@ $root_dir = dirname(__DIR__);
 $webroot_dir = $root_dir . '/webdir';
 
 /**
- * Expose global env() function from oscarotero/env
+ * Use Dotenv to set required environment variables and load .env file in root
+ * .env.local will override .env if it exists
  */
-Env::init();
+$env_files = file_exists($root_dir . '/.env.local')
+	? ['.env', '.env.local']
+	: ['.env'];
 
 /**
  * Use Dotenv to set required environment variables and load .env file in root
  */
-$dotenv = Dotenv\Dotenv::createImmutable($root_dir);
+$dotenv = Dotenv\Dotenv::createUnsafeImmutable($root_dir, $env_files, false);
 if (file_exists($root_dir . '/.env')) {
-    $dotenv->load();
-    $dotenv->required(['WP_HOME', 'WP_SITEURL']);
-    if (!env('DATABASE_URL')) {
-        $dotenv->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD']);
-    }
+	$dotenv->load();
+	$dotenv->required(['WP_HOME', 'WP_SITEURL']);
+	if (!env('DATABASE_URL')) {
+		$dotenv->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD']);
+	}
 }
 
 /**
@@ -98,7 +99,7 @@ Config::define('NONCE_SALT', env('NONCE_SALT'));
 /**
  * Custom Settings
  */
-Config::define('AUTOMATIC_UPDATER_DISABLED', true);
+Config::define('AUTOMATIC_UPDATER_DISABLED', false);
 Config::define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 // Disable the plugin and theme file editor in the admin
 Config::define('DISALLOW_FILE_EDIT', true);

@@ -11,8 +11,6 @@ import tools from "./utils/tools";
 import Device from "./utils/Device";
 //import "./utils/lazyload";
 
-require("Modernizr");
-
 const app = new modular({
   modules: modules,
 });

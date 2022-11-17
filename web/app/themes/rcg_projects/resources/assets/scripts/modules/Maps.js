@@ -1,4 +1,4 @@
-import { module } from "modujs";
+import { module as modularJS } from "modujs";
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
@@ -10,7 +10,7 @@ import axios from "redaxios";
 import { debugLoad, html } from "../utils/env";
 import Swiper from "swiper";
 
-export default class extends module {
+export default class extends modularJS {
   constructor(m) {
     super(m);
   }

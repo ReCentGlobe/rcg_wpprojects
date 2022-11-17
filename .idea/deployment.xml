@@ -9,10 +9,40 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="ESSHC">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/webdir/app/themes/rcg_projects" local="$PROJECT_DIR$/web/app/themes/rcg_projects" web="/" />
+            <mapping deploy="/webdir/app" local="$PROJECT_DIR$/web/app" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="EuropeAsAGlobal">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/webdir/app/themes/rcg_projects" local="$PROJECT_DIR$/web/app/themes/rcg_projects" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="GlobalHistoryHumandKind">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/webdir/app/themes/rcg_projects" local="$PROJECT_DIR$/web/app/themes/rcg_projects" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="HandbookGlobal">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$/web/app/themes/rcg_projects" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="ICHS2026">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/webdir/app/themes/rcg_projects" local="$PROJECT_DIR$/web/app/themes/rcg_projects" web="/" />
+            <mapping deploy="/webdir/app" local="$PROJECT_DIR$/web/app" web="/" />
           </mappings>
         </serverdata>
       </paths>

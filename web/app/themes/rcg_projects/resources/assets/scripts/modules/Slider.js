@@ -1,8 +1,8 @@
-import { module } from "modujs";
+import { module as modularJS } from "modujs";
 import { gsap } from "gsap";
 import Swiper from "swiper";
 
-export default class extends module {
+export default class extends modularJS {
   constructor(m) {
     super(m);
   }

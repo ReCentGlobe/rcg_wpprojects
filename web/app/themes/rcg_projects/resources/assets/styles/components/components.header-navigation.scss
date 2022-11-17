@@ -54,18 +54,22 @@
   &.-desktop &__link.has-children {
     & + .c-header-navigation__childlist{
       visibility: hidden;
-      transition: 0.2s 1s;
+      //transition: 0.2s 1s;
       opacity: 0;
       //transition: 0.2s opacity ease-in-out;
       //transition-delay: 1s;
     }
-    @include u-hocus {
+    & + .c-header-navigation__childlist.is-active {
+      visibility: visible;
+      opacity: 1;
+    }
+/*    @include u-hocus {
       & + .c-header-navigation__childlist {
         visibility: visible;
         transition-delay: 0s;
         opacity: 1;
       }
-    }
+    }*/
   }
 
   &.-desktop &__childlist {

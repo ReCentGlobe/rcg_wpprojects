@@ -1,8 +1,8 @@
-import { module } from "modujs";
+import { module as modularJS } from "modujs";
 import LocomotiveScroll from "locomotive-scroll";
 import { debugLoad, html } from "../utils/env";
 
-export default class extends module {
+export default class extends modularJS {
   constructor(m) {
     super(m);
   }

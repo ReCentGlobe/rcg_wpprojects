@@ -10,7 +10,7 @@
         </fileTransfer>
       </webServer>
       <webServer id="b6cb3bb3-2cd7-42d2-a995-faeee50ef388" name="JMCOE Live">
-        <fileTransfer accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="b381b538-352d-4f0b-a173-01dae471101d" sshConfig="jmcoe@ssh.web1.rz.intern.uni-leipzig.de:22 password">
+        <fileTransfer rootFolder="/home/jmcoe" accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="b381b538-352d-4f0b-a173-01dae471101d" sshConfig="jmcoe@ssh.web1.rz.intern.uni-leipzig.de:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
@@ -48,6 +48,41 @@
         <fileTransfer rootFolder="/home/handbookglobalhistory" accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="96611d60-d4db-4d36-b4e4-91bb4554cdde" sshConfig="Handbook">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="de251901-32db-4fe3-8565-7a464e8d0d1b" name="EuropeAsAGlobal">
+        <fileTransfer rootFolder="/home/europeasaglobalactor" accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="17f71c18-3493-48c4-ad46-e22a0bc37437" sshConfig="europeasaglobalactor@ssh.web1.rz.intern.uni-leipzig.de:22">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="eec46f86-b15d-47cc-93e5-add02e6b82f8" name="GlobalHistoryHumandKind">
+        <fileTransfer rootFolder="/home/globalhistoryofhumankind" accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="ead9c777-9d7b-4524-bdec-6d5c8d4b9b88" sshConfig="globalhistoryHuman">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="c31a4365-9063-4c0a-b84a-6b661a907bce" name="ESSHC">
+        <fileTransfer rootFolder="/home/esshc" accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="0432429c-a788-4eba-bc08-84a58d2a691a" sshConfig="ESSHC">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="287c48bd-4e3e-47fd-8501-2b75ad891668" name="ICHS2026">
+        <fileTransfer rootFolder="/home/ichs2026" accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="45ec7d05-6223-4a0f-ad49-674a0c3a55ea" sshConfig="ICHS">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="00debc16-3c0b-4172-9c0c-935b2a08f0a1" name="CrossArea">
+        <fileTransfer rootFolder="/home/crossarea" accessType="SFTP" host="ssh.web1.rz.intern.uni-leipzig.de" port="22" sshConfigId="daae1afb-fe15-470f-85d7-7ae569944a24" sshConfig="crossarea@ssh.web1.rz.intern.uni-leipzig.de:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>

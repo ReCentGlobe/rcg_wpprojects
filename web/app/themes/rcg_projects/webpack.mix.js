@@ -1,11 +1,6 @@
 const mix = require("laravel-mix");
-require("@tinypixelco/laravel-mix-wp-blocks");
-require("laravel-mix-purgecss");
+//require("@tinypixelco/laravel-mix-wp-blocks");
 require("laravel-mix-copy-watched");
-require("laravel-mix-modernizr");
-require("laravel-mix-polyfill");
-require("mix-tailwindcss");
-require("laravel-mix-bundle-analyzer");
 
 /*
  |--------------------------------------------------------------------------
@@ -18,16 +13,7 @@ require("laravel-mix-bundle-analyzer");
  |
  */
 
-mix.setPublicPath("./dist").browserSync("sage.test");
-
-mix.webpackConfig({
-  externals: function (context, request, callback) {
-    if (/xlsx|canvg|pdfmake/.test(request)) {
-      return callback(null, "commonjs " + request);
-    }
-    callback();
-  },
-});
+mix.setPublicPath("./dist");
 
 mix
   .sass("resources/assets/styles/app.scss", "styles")
@@ -36,13 +22,6 @@ mix
 mix
   .js("resources/assets/scripts/app.js", "scripts")
   .js("resources/assets/scripts/customizer.js", "scripts")
-  .modernizr()
-  .polyfill({
-    enabled: false,
-    useBuiltIns: "usage",
-    targets: "> 0.25%, not dead",
-  })
-  .blocks("resources/assets/scripts/editor.js", "scripts")
   .extract(["lazysizes", "gsap", "swiper", "locomotive-scroll"]);
 
 mix
@@ -58,7 +37,3 @@ mix.options({
   processCssUrls: false,
 });
 
-//mix.sourceMaps(false, "source-map").version();
-if (!mix.inProduction()) {
-  mix.bundleAnalyzer();
-}

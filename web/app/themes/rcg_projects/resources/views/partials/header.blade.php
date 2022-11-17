@@ -44,11 +44,11 @@
       <div class="c-header-navigation -desktop || js-header-navigation">
         @foreach ($navigation as $item)
           <div class="c-header-navigation__item">
-            <a href="{{ $item->url }}" class="c-header-navigation__link @if ($item->children) has-children @endif {{ $item->classes ?? '' }} {{ $item->active ? 'is-active' : '' }}">
+            <a href="{{ $item->url }}" @if ($item->children) data-nav="openChild" @endif class="c-header-navigation__link @if ($item->children) has-children @endif {{ $item->classes ?? '' }} {{ $item->active ? 'is-active' : '' }}">
               {!! $item->label !!}
             </a>
             @if ($item->children)
-              <ul class="c-header-navigation__childlist">
+              <ul class="c-header-navigation__childlist" data-nav="closeChild">
                 @foreach ($item->children as $child)
                   <li class="c-header-navigation__childitem {{ $item->classes ?? '' }} {{ $child->active ? 'active' : '' }}">
                     <a class="c-header-navigation__childlink" href="{{ $child->url }}">

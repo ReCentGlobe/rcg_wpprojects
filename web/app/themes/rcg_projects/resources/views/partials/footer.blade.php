@@ -27,18 +27,18 @@
             <a href="{{ home_url('/') }}" class="">{{ $siteName }}</a>
           </div>
           <div class="c-footer__box c-footer__box--left">
-            <div class="c-footer__newsletter">
-              <h4>
-                @option('newsletter_headline')
-              </h4>
-              <p>
-                @option('newsletter_content')
-              </p>
-              <a
-                href="@option('newsletter_link', 'url')"
-                target="@option('newsletter_link', 'target')"
-                class="o-btn">@option('newsletter_link', 'title')</a>
-            </div>
+              <div class="c-footer__newsletter">
+                <h4>
+                  @option('newsletter_headline')
+                </h4>
+                <p>
+                  @option('newsletter_content')
+                </p>
+                <a
+                  href="@option('newsletter_link', 'url')"
+                  target="@option('newsletter_link', 'target')"
+                  class="o-btn">@option('newsletter_link', 'title')</a>
+              </div>
           </div>
         </div>
         <div class="o-layout__item u-1/2@tablet">
