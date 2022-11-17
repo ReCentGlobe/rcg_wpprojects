@@ -6219,12 +6219,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dom7@npm:^2.1.5":
-  version: 2.1.5
-  resolution: "dom7@npm:2.1.5"
+"dom7@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "dom7@npm:3.0.0"
   dependencies:
-    ssr-window: ^2.0.0
-  checksum: 7615d2d2deb269149595c0e43cf0608fe9b464580cb205a6c003578b9b417611940f40347712c1fcbd2a7e35adbaf3c07ea1a3273d426865fe42ef42e11fdd8d
+    ssr-window: ^3.0.0-alpha.1
+  checksum: 5a1b8979ed35afb9cc6714ff048ce4599a24fd8a11069bb52a61ccae1bdc0716c2bd6b07c4338856d5664d984c0bee9f6b7616a01ffa09daaebfe02fee016e66
   languageName: node
   linkType: hard
 
@@ -9882,13 +9882,13 @@ __metadata:
   linkType: hard
 
 "loader-utils@npm:^1.0.0, loader-utils@npm:^1.0.2, loader-utils@npm:^1.1.0, loader-utils@npm:^1.2.3, loader-utils@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "loader-utils@npm:1.4.0"
+  version: 1.4.2
+  resolution: "loader-utils@npm:1.4.2"
   dependencies:
     big.js: ^5.2.2
     emojis-list: ^3.0.0
     json5: ^1.0.1
-  checksum: d150b15e7a42ac47d935c8b484b79e44ff6ab4c75df7cc4cb9093350cf014ec0b17bdb60c5d6f91a37b8b218bd63b973e263c65944f58ca2573e402b9a27e717
+  checksum: eb6fb622efc0ffd1abdf68a2022f9eac62bef8ec599cf8adb75e94d1d338381780be6278534170e99edc03380a6d29bc7eb1563c89ce17c5fed3a0b17f1ad804
   languageName: node
   linkType: hard
 
@@ -12817,7 +12817,7 @@ __metadata:
     stylelint: ^13.3.3
     stylelint-config-standard: ^20.0.0
     svg4everybody: ^2.1.9
-    swiper: ^5.3.6
+    swiper: ^6.5.1
     tailwindcss: ^1.2.0
     tailwindcss-blend-mode: ^1.0.0
     tailwindcss-gradients: ^3.0.0
@@ -14597,10 +14597,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ssr-window@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "ssr-window@npm:2.0.0"
-  checksum: 9f076def70f0c0e369f00df94a627829b58c225dd6574de1fba99f9c3a9dd8858e2efcfbe4913b7a7ad77f805d40cbddeee7c1e507ad5324a6ea5d70b57ae675
+"ssr-window@npm:^3.0.0, ssr-window@npm:^3.0.0-alpha.1":
+  version: 3.0.0
+  resolution: "ssr-window@npm:3.0.0"
+  checksum: e619db7437874c89d2f4cea94ca8cbdfb4eed9f20d86fa193c29a17829c26d7ceefae344ac1699cc24ebb8d397fd0937a1043b5177a140c2504c9fda58bb5652
   languageName: node
   linkType: hard
 
@@ -15155,13 +15155,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swiper@npm:^5.3.6":
-  version: 5.4.5
-  resolution: "swiper@npm:5.4.5"
+"swiper@npm:^6.5.1":
+  version: 6.8.4
+  resolution: "swiper@npm:6.8.4"
   dependencies:
-    dom7: ^2.1.5
-    ssr-window: ^2.0.0
-  checksum: 5cedb1411d5f0df18ac6ac0d95c1e99d8a8d8ae402fe046fc6d3273bfdb065a4213f55cea449fcb89b5030238e91c53c2a05012fc8dcb171ec355ee83437f9a6
+    dom7: ^3.0.0
+    ssr-window: ^3.0.0
+  checksum: 613239e71135b48378453a74abed9a33d56f147e704e3803f5ea960dbf9833a93e557ef0b75e7c2849328eb1b48fafab54f7ac5b88e8c3727283536c7740b13f
   languageName: node
   linkType: hard
 
