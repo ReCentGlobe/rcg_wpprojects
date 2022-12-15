@@ -52,7 +52,7 @@
     "log1x/modern-login": "^1.0",
     "primetime/wp-plugin-activation-manifest": "^1.0",
     "rarst/laps": "^3.3",
-    "roots/soil": "^3.9",
+    "roots/soil": "^4.1",
     "tiny-pixel/admin-to-console": "^1.0.1",
     "tiny-pixel/wp-performant-media": ">=1.0.1",
     "php": ">=7.4",
